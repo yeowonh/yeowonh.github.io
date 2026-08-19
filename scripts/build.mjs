@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readdirSync, renameSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
@@ -13,7 +13,16 @@ const build = spawnSync(process.execPath, [astroBin, 'build'], {
 if (build.error) throw build.error;
 if (build.status !== 0) process.exit(build.status ?? 1);
 
+const distDir = fileURLToPath(new URL('../dist/', import.meta.url));
+const clientDir = fileURLToPath(new URL('../dist/client/', import.meta.url));
 const serverDir = fileURLToPath(new URL('../dist/server/', import.meta.url));
+
+mkdirSync(clientDir, { recursive: true });
+for (const entry of readdirSync(distDir)) {
+  if (entry === 'client' || entry === 'server') continue;
+  renameSync(`${distDir}${entry}`, `${clientDir}${entry}`);
+}
+
 mkdirSync(serverDir, { recursive: true });
 copyFileSync(
   fileURLToPath(new URL('../sites-worker/index.js', import.meta.url)),
