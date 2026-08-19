@@ -1,0 +1,36 @@
+---
+title: 'SejongMate: Campus Q&A Chatbot'
+summary: Led the end-to-end delivery of a campus information chatbot, from problem framing and data collection to modeling, API development, beta feedback, and iteration.
+category: Conversational AI
+period: '2023'
+role: 'Team lead · End-to-end delivery'
+stack: ['Python', 'NLP', 'Chatbot', 'API']
+cover: '../../assets/projects/sejongmate.png'
+coverAlt: 'SejongMate client, server, and database architecture'
+tint: tint-3
+mark: SM
+featured: true
+order: 40
+---
+
+## Problem
+
+Finding basic information about your own university is harder than it should be. Notices live in one
+place, academic rules in another, and the answer a student actually needs is usually a combination
+of both. Students were spending real time hunting for things the university already published.
+
+## Approach
+
+As team lead, I owned the path from an ambiguous student need to a working beta, including problem
+framing, data collection, modeling, and API development.
+
+- **Framed the user problem before choosing the model.** The team focused on the gap between
+  information the university had already published and answers students could actually find.
+- **Led implementation across the stack.** I coordinated the corpus, modeling work, and API so the
+  project reached a usable beta instead of stopping at a prototype.
+- **Used real feedback to set priorities.** After release, I collected feedback from current
+  students and recent graduates and used it to guide the next iteration.
+
+## Result
+
+- **Excellence Award, 15th Creative Design Competition** (Sejong University, Jun 2023)

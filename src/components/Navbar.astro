@@ -1,0 +1,16 @@
+---
+import { site } from '../data/site';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<nav class="navbar">
+  {
+    site.nav.map((item) => (
+      <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>
+        {item.label}
+      </a>
+    ))
+  }
+</nav>

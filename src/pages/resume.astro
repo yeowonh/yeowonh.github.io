@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+import {
+  experience,
+  education,
+  publications,
+  awards,
+  certifications,
+  languages,
+} from '../data/resume';
+---
+
+<BaseLayout title="Resume" heading="Resume" description={`Résumé of ${site.name}, ${site.title}`}>
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="briefcase" /></span>
+      Experience
+    </h3>
+
+    <ol class="timeline">
+      {
+        experience.map((job) => (
+          <li class="tl-item">
+            <h4>{job.role} · {job.company}</h4>
+            <span class="when">
+              {job.period}
+              {job.kind && ` · ${job.kind}`}
+              {job.location && ` · ${job.location}`}
+            </span>
+            {job.summary && <p>{job.summary}</p>}
+            {job.highlights.length > 0 && (
+              <ul>
+                {job.highlights.map((h) => (
+                  <li>{h}</li>
+                ))}
+              </ul>
+            )}
+            {job.stack && job.stack.length > 0 && <p class="tags">{job.stack.join(' · ')}</p>}
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="book" /></span>
+      Education
+    </h3>
+
+    <ol class="timeline">
+      {
+        education.map((edu) => (
+          <li class="tl-item">
+            <h4>{edu.school}</h4>
+            <span class="when">{edu.period}</span>
+            <p>{edu.degree}</p>
+            {edu.notes && edu.notes.length > 0 && (
+              <ul>
+                {edu.notes.map((n) => (
+                  <li>{n}</li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  {
+    publications.length > 0 && (
+      <section class="section">
+        <h3 class="section-title with-ico">
+          <span class="title-ico"><Icon name="file" /></span>
+          Publications
+        </h3>
+
+        <ol class="timeline">
+          {publications.map((pub) => (
+            <li class="tl-item">
+              <h4>
+                {pub.href ? (
+                  <a href={pub.href} target="_blank" rel="noopener">
+                    {pub.title}
+                  </a>
+                ) : (
+                  pub.title
+                )}
+              </h4>
+              <span class="when">{pub.venue} · {pub.date}</span>
+              {pub.note && <p>{pub.note}</p>}
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    awards.length > 0 && (
+      <section class="section">
+        <h3 class="section-title with-ico">
+          <span class="title-ico"><Icon name="award" /></span>
+          Awards
+        </h3>
+
+        <ol class="timeline">
+          {awards.map((a) => (
+            <li class="tl-item">
+              <h4>{a.title}</h4>
+              <span class="when">{a.org} · {a.date}</span>
+              {a.note && <p>{a.note}</p>}
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="check" /></span>
+      Certifications &amp; Languages
+    </h3>
+
+    <div class="cred-cols">
+      <div class="cred-card">
+        <h4>Certifications</h4>
+        {
+          certifications.map((c) => (
+            <div class="cred-item">
+              <p class="n">{c.name}</p>
+              <p class="v">{c.issuer}</p>
+              {c.detail && <p class="d">{c.detail}</p>}
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="cred-card">
+        <h4>Languages</h4>
+        {
+          languages.map((l) => (
+            <div class="cred-item">
+              <p class="n">{l.name}</p>
+              <p class="v">{l.issuer}</p>
+              {l.detail && <p class="d">{l.detail}</p>}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <p class="no-print">
+    <button type="button" class="print-btn" id="print-btn">Print / Save as PDF</button>
+  </p>
+
+  <script>
+    document.getElementById('print-btn')?.addEventListener('click', () => window.print());
+  </script>
+</BaseLayout>

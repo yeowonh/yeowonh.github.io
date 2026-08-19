@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const entries = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.order - a.data.order,
+);
+
+const categories = ['All', ...new Set(entries.map((e) => e.data.category))];
+---
+
+<BaseLayout
+  title="Portfolio"
+  heading="Portfolio"
+  description="Selected AI, NLP, and data projects with the decisions, implementation, and outcomes behind each one."
+>
+  <p class="lead">
+    Selected work presented as engineering case studies: the problem, the decisions, and the result.
+  </p>
+
+  <div class="filters" role="group" aria-label="Filter by category">
+    {
+      categories.map((cat, i) => (
+        <a
+          href="#"
+          class="filter"
+          data-filter={cat}
+          aria-current={i === 0 ? 'true' : 'false'}
+        >
+          {cat}
+        </a>
+      ))
+    }
+  </div>
+
+  <ul class="proj-grid">
+    {
+      entries.map((entry) => (
+        <li data-category={entry.data.category}>
+          <a class="proj-card" href={`/projects/${entry.id}`}>
+            {entry.data.cover ? (
+              <Image
+                class="thumb"
+                src={entry.data.cover}
+                alt={entry.data.coverAlt ?? entry.data.title}
+                width={640}
+                height={480}
+              />
+            ) : (
+              <div class:list={['thumb', entry.data.tint]}>
+                <span class="mark">{entry.data.mark || entry.data.title.slice(0, 2)}</span>
+              </div>
+            )}
+            <h3>{entry.data.title}</h3>
+            <p class="cat">{entry.data.category}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <script>
+    const filters = document.querySelectorAll<HTMLAnchorElement>('.filter');
+    const items = document.querySelectorAll<HTMLLIElement>('.proj-grid > li');
+
+    filters.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pick = btn.dataset.filter;
+
+        filters.forEach((f) => f.setAttribute('aria-current', String(f === btn)));
+        items.forEach((li) => {
+          const show = pick === 'All' || li.dataset.category === pick;
+          li.hidden = !show;
+        });
+      });
+    });
+  </script>
+</BaseLayout>
