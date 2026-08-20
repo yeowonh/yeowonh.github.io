@@ -14,7 +14,12 @@ const { Content } = await render(entry);
 const { title, summary, category, period, role, stack, links } = entry.data;
 ---
 
-<BaseLayout title={title} heading={title} description={summary}>
+<BaseLayout
+  title={title}
+  heading={title}
+  description={summary}
+  image={entry.data.cover?.src}
+>
   <section class="project-overview" aria-labelledby="project-overview-title">
     <h2 class="project-kicker" id="project-overview-title">Project Overview</h2>
     <p class="project-summary">{summary}</p>

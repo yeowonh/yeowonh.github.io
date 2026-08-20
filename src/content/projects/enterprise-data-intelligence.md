@@ -5,6 +5,8 @@ category: Enterprise AI
 period: 'Jan 2026 to Present'
 role: 'Analytics Engineer · Product, AI agent, retrieval, evaluation'
 stack: ['Python', 'LangGraph', 'FastAPI', 'Next.js', 'BigQuery', 'Airflow', 'MCP', 'Langfuse']
+cover: '../../assets/projects/enterprise-data-intelligence.png'
+coverAlt: 'Privacy-safe enterprise data assistant interface with query, catalog, lineage, and quality views'
 tint: tint-1
 mark: DI
 featured: true
