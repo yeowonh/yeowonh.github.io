@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
@@ -23,6 +24,17 @@ const { title, summary, category, period, role, stack, links } = entry.data;
   <section class="project-overview" aria-labelledby="project-overview-title">
     <h2 class="project-kicker" id="project-overview-title">Project Overview</h2>
     <p class="project-summary">{summary}</p>
+    {
+      entry.data.cover && (
+        <Image
+          class="project-overview-cover"
+          src={entry.data.cover}
+          alt={entry.data.coverAlt ?? `${title} project thumbnail`}
+          width={960}
+          height={720}
+        />
+      )
+    }
   </section>
 
   <dl class="detail-meta">

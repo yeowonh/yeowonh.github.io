@@ -578,6 +578,17 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: -0.012em;
 }
 
+.project-overview-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-top: 20px;
+  object-fit: cover;
+  border: 1px solid hsl(226, 42%, 84%);
+  border-radius: calc(var(--radius-sm) - 3px);
+  box-shadow: 0 12px 30px hsla(228, 40%, 24%, 0.12);
+}
+
 .detail-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
