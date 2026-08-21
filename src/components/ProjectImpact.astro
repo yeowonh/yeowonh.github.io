@@ -1,0 +1,64 @@
+---
+import type { ProjectImpact } from '../data/projectImpacts';
+
+interface Props {
+  impact: ProjectImpact;
+  id: string;
+  locale?: 'en' | 'ko';
+}
+
+const { impact, id, locale = 'en' } = Astro.props;
+const detailsLabel = locale === 'ko' ? '세부 정보' : 'details';
+const flowLabel = locale === 'ko' ? '흐름' : 'flow';
+---
+
+<section class="impact-snapshot" aria-labelledby={id}>
+  <header class="impact-heading">
+    <p>{impact.eyebrow}</p>
+    <h2 id={id}>{impact.title}</h2>
+  </header>
+
+  <div class="impact-grid">
+    {
+      impact.items.map((item) => {
+        const maxBar = Math.max(...(item.bars?.map((bar) => bar.amount) ?? [1]));
+
+        return (
+          <article class:list={["impact-card", `impact-card-${item.kind}`]}>
+            <p class="impact-label">{item.label}</p>
+            <p class="impact-value">{item.value}</p>
+            <p class="impact-caption">{item.caption}</p>
+
+            {item.kind === 'comparison' && item.bars && (
+              <div class="impact-bars" role="img" aria-label={`${item.label}: ${item.bars.map((bar) => `${bar.label} ${bar.display}`).join(', ')}`}>
+                {item.bars.map((bar) => (
+                  <div class="impact-bar-row">
+                    <div class="impact-bar-meta">
+                      <span>{bar.label}</span>
+                      <strong>{bar.display}</strong>
+                    </div>
+                    <div class="impact-bar-track" aria-hidden="true">
+                      <span style={`--impact-bar-width: ${Math.max(10, (bar.amount / maxBar) * 100)}%`} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {item.tokens && (
+              <ul class="impact-tokens" aria-label={`${item.label} ${detailsLabel}`}>
+                {item.tokens.map((token) => <li>{token}</li>)}
+              </ul>
+            )}
+
+            {item.kind === 'flow' && item.steps && (
+              <ol class="impact-flow" aria-label={`${item.label} ${flowLabel}`}>
+                {item.steps.map((step) => <li>{step}</li>)}
+              </ol>
+            )}
+          </article>
+        );
+      })
+    }
+  </div>
+</section>
