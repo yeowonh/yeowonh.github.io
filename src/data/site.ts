@@ -19,7 +19,7 @@ export const site = {
    */
   intro: [
     'I build reliable AI and data products that turn complex information into decisions people can act on. At Kakao Mobility, I develop analytics systems and self-service data tools used across business teams. Before that, I shipped retrieval-based assistants and Korean finance NLP research.',
-    'My work spans the full path from an ambiguous question to a production system: data modeling, retrieval and evaluation, APIs and interfaces, and the feedback loops that keep quality improving. I care about measurable adoption as much as model performance; one internal product grew monthly active users roughly 6× in six months.',
+    'My work spans the full path from an ambiguous question to a production system: data modeling, retrieval and evaluation, APIs and interfaces, and the feedback loops that keep quality improving. I care about measurable adoption as much as model performance; one internal product grew monthly active users (MAU) roughly 6× in six months.',
     'I work at the boundary of research, engineering, and the people using the product. I make trade-offs explicit, build evidence before scaling, and document what I learn at ll2ll.tistory.com.',
   ],
 
@@ -74,7 +74,7 @@ export const siteKo = {
   title: '애널리틱스 엔지니어 · AI 시스템',
   intro: [
     '복잡한 정보를 사람들이 실제로 행동할 수 있는 의사결정으로 바꾸는 신뢰도 높은 AI·데이터 제품을 만듭니다. 카카오모빌리티에서 여러 비즈니스 조직이 활용하는 분석 시스템과 셀프서비스 데이터 도구를 개발하고 있습니다. 이전에는 검색 기반 어시스턴트와 한국어 금융 NLP 연구를 수행했습니다.',
-    '모호한 질문을 프로덕션 시스템으로 만드는 전 과정을 다룹니다. 데이터 모델링, 검색과 평가, API와 인터페이스, 품질을 지속적으로 높이는 피드백 루프까지 연결합니다. 모델 성능만큼 실제 사용과 확산을 중요하게 생각하며, 사내 제품 한 곳의 월간 활성 사용자를 6개월 동안 약 6배 성장시켰습니다.',
+    '모호한 질문을 프로덕션 시스템으로 만드는 전 과정을 다룹니다. 데이터 모델링, 검색과 평가, API와 인터페이스, 품질을 지속적으로 높이는 피드백 루프까지 연결합니다. 모델 성능만큼 실제 사용과 확산을 중요하게 생각하며, 사내 제품 한 곳의 MAU(월간 활성 사용자 수)를 6개월 동안 약 6배 성장시켰습니다.',
     '연구, 엔지니어링, 실제 사용자 사이의 경계에서 일합니다. 선택과 트레이드오프를 명확히 하고, 확장 전에 근거를 만들며, 배운 내용을 ll2ll.tistory.com에 기록합니다.',
   ],
   location: '대한민국 성남',

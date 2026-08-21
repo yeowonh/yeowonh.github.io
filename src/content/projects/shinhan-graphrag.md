@@ -37,4 +37,9 @@ which is often the provision that *states* the rule rather than the ones that qu
 
 ## Result
 
-- Shipped as an extension of the employee-facing vertical AI assistant.
+- **Productionization | Shipped as an extension of an employee-facing vertical AI assistant,** not
+  as a standalone research prototype.
+- **Retrieval capability | Expanded legal QA from single-hop similarity search to relationship-aware
+  multi-hop context,** covering citations and delegation across provisions, decrees, and rules.
+- **Answer traceability | Preserved the legal relationship path used to assemble context,** making
+  supporting provisions easier to inspect than in flat retrieval.

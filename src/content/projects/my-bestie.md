@@ -30,5 +30,9 @@ continuity and personalization rather than treating every session as a fresh sea
 
 ## Result
 
-- Completed within the one-month final project window and taken through **public exhibition and
-  deployment** instead of stopping at a demo notebook.
+- **Delivery velocity | Shipped a public deployment in four weeks** within the Boostcamp final
+  project window.
+- **Team execution | Delivered with a seven-person NLP team,** keeping the scope focused on memory
+  and continuity instead of a broad generic assistant.
+- **Product validation | Advanced beyond a demo notebook to public exhibition,** putting the full
+  personalized conversation flow in front of real visitors.

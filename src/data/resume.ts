@@ -64,7 +64,7 @@ export const experience: ExperienceItem[] = [
     summary:
       'Builds analytics systems and AI-assisted data products that help business teams answer questions without waiting on a specialist.',
     highlights: [
-      'Launched an internal data catalog that unifies table lineage with a business ontology, then made it available through an MCP server for use in AI coding tools. Monthly active users grew roughly 6× in six months.',
+      'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. Monthly active users (MAU) grew roughly 6× in six months.',
       'Established the product quality system: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
       'Closed the feedback loop with automated follow-ups, inbound feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
       'Converted scattered domain expertise into a reviewed knowledge asset. Domain experts contribute, experiments validate changes, and approved gaps flow back into the system automatically; the approach was piloted against a held-out evaluation set.',
@@ -134,6 +134,7 @@ export const publications: PublicationItem[] = [
     venue: 'CIKM 2025 Workshop on Advances in Financial AI',
     date: '2025',
     note: 'A Korean finance embedding model paired with KorFinSTS, a high-quality semantic similarity benchmark, and released with the training data and code.',
+    href: 'https://arxiv.org/abs/2507.09601',
   },
   {
     title:
@@ -141,6 +142,7 @@ export const publications: PublicationItem[] = [
     venue: 'ICLR 2025 Workshop on Advances in Financial AI',
     date: 'Mar 2025',
     note: 'First author. Introduces KorFinMTEB, built from public datasets plus financial reports, news, and DART filings, because translated benchmarks miss the linguistic and cultural nuance of the domain.',
+    href: 'https://arxiv.org/abs/2502.07131',
   },
   {
     title: 'Exploring Hard Negative Mining with NV-Retriever in Korean Financial Text',

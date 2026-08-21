@@ -1,6 +1,6 @@
 ---
 title: Enterprise Data Intelligence Platform
-summary: Built an AI-assisted data discovery platform that connects business definitions, lineage, and governed query workflows, then grew monthly active usage roughly 6x in six months.
+summary: Launched an AI-assisted data intelligence platform across web, MCP, and messaging workflows, growing monthly active users (MAU) roughly 6× in six months.
 category: Enterprise AI
 period: 'Jan 2026 to Present'
 role: 'Analytics Engineer · Product, AI agent, retrieval, evaluation'
@@ -43,11 +43,17 @@ request.
 
 ## Result
 
-- **Monthly active usage grew roughly 6x in six months** as the product expanded from data discovery
-  into a reliable path for understanding and using enterprise data.
-- **Established a repeatable quality operating system** that turns production failures and user
-  feedback into evaluated improvements instead of one-off fixes.
-- **Improved trust in AI-assisted analysis** by making permissions, evidence, and lineage part of
-  the product experience, not hidden implementation details.
-- **Converted fragmented domain knowledge into a reviewed shared asset** that can improve both human
-  search and agent workflows over time.
+- **Product adoption | MAU grew roughly 6× in six months.** Expanded the product from data discovery
+  into a repeatable self-service path for understanding and using enterprise data.
+- **Distribution | Reached users through three product surfaces.** Delivered one governed knowledge
+  layer through a non-technical web experience, an MCP interface for AI development tools, and
+  messaging workflows.
+- **Quality operations | Institutionalized daily, weekly, and biweekly feedback cycles.** Combined
+  daily adoption telemetry, weekly consistency audits, session-level LLM scoring, and biweekly user
+  interviews to turn production failures into prioritized, evaluated improvements.
+- **Governance | Made trust controls part of the user experience.** Permission-aware retrieval,
+  guarded query execution, visible evidence, and lineage became product contracts rather than
+  hidden implementation details.
+- **Knowledge operations | Converted recurring answer gaps into a reviewed shared asset.** Created
+  a closed loop in which feedback becomes reviewable knowledge candidates that improve both human
+  search and agent workflows.

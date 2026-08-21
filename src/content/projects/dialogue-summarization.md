@@ -31,5 +31,9 @@ The task was to find those topics and summarize each one.
 
 ## Result
 
-- **Placed 5th and advanced to the finals** of the National Institute of Korean Language's Everyday
-  Dialogue Summarization Challenge.
+- **Competitive ranking | Placed 5th and advanced to the national finals** in the National Institute
+  of Korean Language's Everyday Dialogue Summarization Challenge.
+- **Model efficiency | Delivered within the competition's training and inference budget** through
+  quantization and focused hyperparameter tuning.
+- **Evaluation discipline | Converted baseline failure patterns into preprocessing and prompt
+  decisions,** keeping iteration grounded in error analysis rather than leaderboard-only tuning.

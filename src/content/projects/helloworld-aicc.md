@@ -51,8 +51,11 @@ and support that goes as far as helping someone write a cover letter for a job a
 
 ## Result
 
-- **Encouragement Award, SeSAC Hackathon 2024** (Seoul Business Agency, Aug 2024)
-- **Selected for sponsorship by Side Impact / Brian Impact Foundation** (Spark Track, Oct 2024 to
-  Feb 2025), on the strength of its public-interest value and how complete the implementation was
-- Went past the demo stage: performance work continued after the award, with a Play Store release
-  planned
+- **External validation | Earned two recognitions within six months.** Received the Encouragement
+  Award at SeSAC Hackathon 2024 and was selected for Side Impact / Brian Impact Foundation's Spark
+  Track sponsorship for public-interest value and implementation completeness.
+- **Production delivery | Advanced from hackathon prototype to a release-oriented service.** Shipped
+  streaming RAG, authenticated conversation history, counselor summaries, and automated deployment
+  on a serverless Azure backend.
+- **Service continuity | Preserved context across AI and human support.** Designed structured session
+  summaries so escalated cases could continue with the relevant conversation context intact.

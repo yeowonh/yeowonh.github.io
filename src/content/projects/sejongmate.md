@@ -33,4 +33,9 @@ framing, data collection, modeling, and API development.
 
 ## Result
 
-- **Excellence Award, 15th Creative Design Competition** (Sejong University, Jun 2023)
+- **External validation | Placed 2nd with the Excellence Award** at Sejong University's 15th Creative
+  Design Competition.
+- **End-to-end delivery | Advanced from problem framing to a working beta,** integrating corpus
+  development, NLP modeling, and API delivery under one product plan.
+- **User feedback | Used input from current students and recent graduates to prioritize the next
+  iteration,** replacing assumption-led planning with direct user evidence.

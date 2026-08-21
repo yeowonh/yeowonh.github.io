@@ -20,7 +20,7 @@ export const experience: ExperienceItem[] = [
     summary:
       '비즈니스 조직이 데이터 전문가를 기다리지 않고 질문에 답할 수 있도록 분석 시스템과 AI 기반 데이터 제품을 개발합니다.',
     highlights: [
-      '테이블 리니지와 비즈니스 온톨로지를 연결한 사내 데이터 카탈로그를 출시하고, AI 코딩 도구에서도 사용할 수 있도록 MCP 서버로 제공했습니다. 월간 활성 사용자는 6개월 동안 약 6배 성장했습니다.',
+      '테이블 리니지와 비즈니스 온톨로지를 연결한 사내 데이터 카탈로그를 출시하고 MCP를 통해 AI 개발 업무까지 확장했습니다. MAU(월간 활성 사용자 수)는 6개월 동안 약 6배 성장했습니다.',
       '일별 사용 현황 리포트, 카탈로그 정확도 골든 평가 세트, 주간 정합성 점검, 모든 세션에 대한 LLM 기반 스코어링과 정기 실패 리뷰를 포함한 제품 품질 체계를 구축했습니다.',
       '자동 후속 질문, 인앱 피드백, 격주 사용자 인터뷰로 피드백 루프를 닫았습니다. 멀티턴 대화, 이미지 입력, 답변 재생성 및 편집, 비개발자용 인터페이스 등 사용자가 요청한 기능을 제품에 반영했습니다.',
       '분산되어 있던 도메인 지식을 검토 가능한 공통 자산으로 전환했습니다. 도메인 전문가가 지식을 기여하고 실험으로 변경을 검증하며, 승인된 지식 공백이 시스템에 자동 반영되는 흐름을 홀드아웃 평가 세트로 검증했습니다.',
@@ -87,6 +87,7 @@ export const publications: PublicationItem[] = [
     venue: 'CIKM 2025 Workshop on Advances in Financial AI',
     date: '2025년',
     note: '한국어 금융 임베딩 모델과 고품질 의미 유사도 벤치마크 KorFinSTS를 함께 제안하고 학습 데이터와 코드를 공개했습니다.',
+    href: 'https://arxiv.org/abs/2507.09601',
   },
   {
     title:
@@ -94,6 +95,7 @@ export const publications: PublicationItem[] = [
     venue: 'ICLR 2025 Workshop on Advances in Financial AI',
     date: '2025년 3월',
     note: '제1저자. 번역 벤치마크가 놓치는 언어·문화적 맥락을 평가하기 위해 공개 데이터셋과 금융 보고서, 뉴스, DART 공시로 KorFinMTEB를 구축했습니다.',
+    href: 'https://arxiv.org/abs/2502.07131',
   },
   {
     title: 'Exploring Hard Negative Mining with NV-Retriever in Korean Financial Text',
