@@ -17,5 +17,13 @@ export default defineConfig({
     format: 'file',
   },
 
+  i18n: {
+    locales: ['en', 'ko'],
+    defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+
   integrations: [sitemap()],
 });

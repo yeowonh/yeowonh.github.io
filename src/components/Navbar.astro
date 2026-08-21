@@ -1,16 +1,34 @@
 ---
-import { site } from '../data/site';
+import { cleanPagePath, getSite, localePathFor, localizedPath, type Locale } from '../data/site';
 
-const path = Astro.url.pathname.replace(/\/$/, '') || '/';
-const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const site = getSite(locale);
+const path = cleanPagePath(Astro.url.pathname);
+const active = (href: string) => {
+  const localizedHref = localizedPath(href, locale);
+  return localizedHref === '/' || localizedHref === '/ko'
+    ? path === localizedHref
+    : path.startsWith(localizedHref);
+};
 ---
 
-<nav class="navbar">
-  {
-    site.nav.map((item) => (
-      <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>
-        {item.label}
-      </a>
-    ))
-  }
+<nav class="navbar" aria-label={locale === 'ko' ? '주요 메뉴' : 'Primary navigation'}>
+  <div class="nav-links">
+    {
+      site.nav.map((item) => (
+        <a href={localizedPath(item.href, locale)} aria-current={active(item.href) ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+  <div class="language-switch" aria-label={locale === 'ko' ? '언어 선택' : 'Language selection'}>
+    <a href={localePathFor(Astro.url.pathname, 'en')} aria-current={locale === 'en' ? 'true' : undefined} lang="en">EN</a>
+    <span aria-hidden="true">/</span>
+    <a href={localePathFor(Astro.url.pathname, 'ko')} aria-current={locale === 'ko' ? 'true' : undefined} lang="ko">KO</a>
+  </div>
 </nav>

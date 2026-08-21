@@ -54,6 +54,12 @@
 
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
+html[lang='ko'] body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  word-break: keep-all;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -241,9 +247,14 @@ img { display: block; max-width: 100%; height: auto; }
   border-bottom: 1px solid var(--border);
   border-radius: 0 var(--radius) 0 var(--radius);
   backdrop-filter: blur(8px);
+  align-items: stretch;
 }
 
-.navbar a {
+.nav-links {
+  display: flex;
+}
+
+.nav-links > a {
   padding: 20px 16px;
   font-size: 14.5px;
   font-weight: 500;
@@ -252,7 +263,27 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .navbar a:hover { color: var(--ink); }
-.navbar a[aria-current='page'] { color: var(--accent); }
+.nav-links > a[aria-current='page'] { color: var(--accent); }
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 13px 4px 13px 8px;
+  padding: 0 9px;
+  border-left: 1px solid var(--border);
+  color: var(--faint);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.language-switch a {
+  padding: 4px 0;
+  color: var(--faint);
+}
+
+.language-switch a[aria-current='true'] { color: var(--accent); }
 
 .body { padding: 40px 44px 48px; }
 
@@ -261,7 +292,7 @@ img { display: block; max-width: 100%; height: auto; }
   font-weight: 700;
   letter-spacing: -0.035em;
   /* keep long titles clear of the absolutely-positioned navbar */
-  padding-right: 19rem;
+  padding-right: 27rem;
   text-wrap: balance;
 }
 
@@ -891,7 +922,8 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .navbar::-webkit-scrollbar { display: none; }
-  .navbar a { padding: 14px 12px; white-space: nowrap; }
+  .nav-links > a { padding: 14px 12px; white-space: nowrap; }
+  .language-switch { margin-block: 8px; margin-left: auto; white-space: nowrap; }
   .body { padding: 26px 22px 30px; }
   .page-title { font-size: 26px; padding-right: 0; }
   .services { grid-template-columns: 1fr; }

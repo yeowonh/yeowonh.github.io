@@ -4,8 +4,8 @@ import { glob } from 'astro/loaders';
 /**
  * Portfolio entries. src/content/projects/*.md -> /projects/<filename>
  */
-const projects = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+const createProjectsCollection = (base: string) => defineCollection({
+  loader: glob({ pattern: '**/*.md', base }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -41,4 +41,7 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { projects };
+const projects = createProjectsCollection('./src/content/projects');
+const projectsKo = createProjectsCollection('./src/content/projects-ko');
+
+export const collections = { projects, projectsKo };

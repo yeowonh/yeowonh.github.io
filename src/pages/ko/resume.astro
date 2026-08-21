@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { siteKo as site } from '../../data/site';
+import {
+  experience,
+  education,
+  publications,
+  awards,
+  certifications,
+  languages,
+} from '../../data/resume.ko';
+---
+
+<BaseLayout title="이력" heading="이력" description={`${site.name}, ${site.title}의 이력서`} locale="ko">
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="briefcase" /></span>
+      경력
+    </h3>
+
+    <ol class="timeline">
+      {
+        experience.map((job) => (
+          <li class="tl-item">
+            <h4>{job.role} · {job.company}</h4>
+            <span class="when">
+              {job.period}
+              {job.kind && ` · ${job.kind}`}
+              {job.location && ` · ${job.location}`}
+            </span>
+            {job.summary && <p>{job.summary}</p>}
+            {job.highlights.length > 0 && (
+              <ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+            )}
+            {job.stack && job.stack.length > 0 && <p class="tags">{job.stack.join(' · ')}</p>}
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="book" /></span>
+      학력
+    </h3>
+    <ol class="timeline">
+      {
+        education.map((edu) => (
+          <li class="tl-item">
+            <h4>{edu.school}</h4>
+            <span class="when">{edu.period}</span>
+            <p>{edu.degree}</p>
+            {edu.notes && edu.notes.length > 0 && <ul>{edu.notes.map((note) => <li>{note}</li>)}</ul>}
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  {
+    publications.length > 0 && (
+      <section class="section">
+        <h3 class="section-title with-ico">
+          <span class="title-ico"><Icon name="file" /></span>
+          논문 및 글
+        </h3>
+        <ol class="timeline">
+          {publications.map((publication) => (
+            <li class="tl-item">
+              <h4>
+                {publication.href ? (
+                  <a href={publication.href} target="_blank" rel="noopener">{publication.title}</a>
+                ) : publication.title}
+              </h4>
+              <span class="when">{publication.venue} · {publication.date}</span>
+              {publication.note && <p>{publication.note}</p>}
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    awards.length > 0 && (
+      <section class="section">
+        <h3 class="section-title with-ico">
+          <span class="title-ico"><Icon name="award" /></span>
+          수상
+        </h3>
+        <ol class="timeline">
+          {awards.map((award) => (
+            <li class="tl-item">
+              <h4>{award.title}</h4>
+              <span class="when">{award.org} · {award.date}</span>
+              {award.note && <p>{award.note}</p>}
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <h3 class="section-title with-ico">
+      <span class="title-ico"><Icon name="check" /></span>
+      자격증 및 언어
+    </h3>
+    <div class="cred-cols">
+      <div class="cred-card">
+        <h4>자격증</h4>
+        {certifications.map((credential) => (
+          <div class="cred-item">
+            <p class="n">{credential.name}</p>
+            <p class="v">{credential.issuer}</p>
+            {credential.detail && <p class="d">{credential.detail}</p>}
+          </div>
+        ))}
+      </div>
+      <div class="cred-card">
+        <h4>언어</h4>
+        {languages.map((language) => (
+          <div class="cred-item">
+            <p class="n">{language.name}</p>
+            <p class="v">{language.issuer}</p>
+            {language.detail && <p class="d">{language.detail}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <p class="no-print">
+    <button type="button" class="print-btn" id="print-btn">인쇄 / PDF 저장</button>
+  </p>
+
+  <script>
+    document.getElementById('print-btn')?.addEventListener('click', () => window.print());
+  </script>
+</BaseLayout>

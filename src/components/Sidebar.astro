@@ -1,8 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
-import { site } from '../data/site';
+import { getSite, type Locale } from '../data/site';
 import profile from '../assets/profile.jpeg';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const site = getSite(locale);
+const labels = locale === 'ko'
+  ? { email: '이메일', location: '위치', status: '상태', portrait: `${site.name} 프로필 사진` }
+  : { email: 'Email', location: 'Location', status: 'Status', portrait: `Portrait of ${site.name}` };
 
 const socials = [
   { label: 'GitHub', href: site.links.github, icon: 'github' },
@@ -12,7 +22,7 @@ const socials = [
 ---
 
 <aside class="sidebar card">
-  <Image class="avatar" src={profile} alt={`Portrait of ${site.name}`} width={480} height={600} loading="eager" />
+  <Image class="avatar" src={profile} alt={labels.portrait} width={480} height={600} loading="eager" />
 
   <div class="who">
     <h1>{site.name}</h1>
@@ -26,7 +36,7 @@ const socials = [
     <li class="fact">
       <div class="fact-ico"><Icon name="mail" /></div>
       <div>
-        <span class="fact-label">Email</span>
+        <span class="fact-label">{labels.email}</span>
         <a class="fact-value" href={`mailto:${site.email}`}>{site.email}</a>
       </div>
     </li>
@@ -34,7 +44,7 @@ const socials = [
     <li class="fact">
       <div class="fact-ico"><Icon name="pin" /></div>
       <div>
-        <span class="fact-label">Location</span>
+        <span class="fact-label">{labels.location}</span>
         <span class="fact-value">{site.location}</span>
       </div>
     </li>
@@ -54,7 +64,7 @@ const socials = [
         <li class="fact">
           <div class="fact-ico"><Icon name="check" /></div>
           <div>
-            <span class="fact-label">Status</span>
+            <span class="fact-label">{labels.status}</span>
             <span class="fact-value">{site.availability}</span>
           </div>
         </li>

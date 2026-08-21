@@ -7,7 +7,7 @@ import '../styles/global.css';
 
 import Sidebar from '../components/Sidebar.astro';
 import Navbar from '../components/Navbar.astro';
-import { site } from '../data/site';
+import { cleanPagePath, getSite, localePathFor, type Locale } from '../data/site';
 
 interface Props {
   /** Browser tab / OG title. Omit on the landing page. */
@@ -16,19 +16,23 @@ interface Props {
   heading: string;
   description?: string;
   image?: string;
+  locale?: Locale;
 }
 
-const { title, heading, description, image } = Astro.props;
+const { title, heading, description, image, locale = 'en' } = Astro.props;
+const site = getSite(locale);
 
 const pageTitle = title ? `${title} · ${site.name}` : `${site.name} | ${site.title}`;
 const pageDesc = description ?? site.intro[0];
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(cleanPagePath(Astro.url.pathname), Astro.site);
 const socialImage = image ? new URL(image, Astro.site) : undefined;
+const enUrl = new URL(localePathFor(Astro.url.pathname, 'en'), Astro.site);
+const koUrl = new URL(localePathFor(Astro.url.pathname, 'ko'), Astro.site);
 const year = new Date().getFullYear();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,6 +40,9 @@ const year = new Date().getFullYear();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="ko" href={koUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
 
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
@@ -56,10 +63,10 @@ const year = new Date().getFullYear();
 
   <body>
     <div class="shell">
-      <Sidebar />
+      <Sidebar locale={locale} />
 
       <main class="main card">
-        <Navbar />
+        <Navbar locale={locale} />
 
         <div class="body">
           <h2 class="page-title">{heading}</h2>

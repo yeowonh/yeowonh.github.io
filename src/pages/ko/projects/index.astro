@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const entries = (await getCollection('projectsKo', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.order - a.data.order,
+);
+
+const allCategory = '전체';
+const categories = [allCategory, ...new Set(entries.map((entry) => entry.data.category))];
+---
+
+<BaseLayout
+  title="포트폴리오"
+  heading="포트폴리오"
+  description="핵심 의사결정, 구현, 성과를 중심으로 정리한 AI, NLP, 데이터 프로젝트입니다."
+  locale="ko"
+>
+  <p class="lead">문제, 핵심 의사결정, 구현, 성과를 중심으로 정리한 엔지니어링 사례입니다.</p>
+
+  <div class="filters" role="group" aria-label="카테고리로 필터링">
+    {
+      categories.map((category, index) => (
+        <a href="#" class="filter" data-filter={category} aria-current={index === 0 ? 'true' : 'false'}>
+          {category}
+        </a>
+      ))
+    }
+  </div>
+
+  <ul class="proj-grid">
+    {
+      entries.map((entry) => (
+        <li data-category={entry.data.category}>
+          <a class="proj-card" href={`/ko/projects/${entry.id}`}>
+            {entry.data.cover ? (
+              <Image
+                class="thumb"
+                src={entry.data.cover}
+                alt={entry.data.coverAlt ?? entry.data.title}
+                width={640}
+                height={480}
+              />
+            ) : (
+              <div class:list={['thumb', entry.data.tint]}>
+                <span class="mark">{entry.data.mark || entry.data.title.slice(0, 2)}</span>
+              </div>
+            )}
+            <h3>{entry.data.title}</h3>
+            <p class="cat">{entry.data.category}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <script define:vars={{ allCategory }}>
+    const filters = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('.proj-grid > li');
+
+    filters.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const selected = button.dataset.filter;
+        filters.forEach((filter) => filter.setAttribute('aria-current', String(filter === button)));
+        items.forEach((item) => {
+          item.hidden = selected !== allCategory && item.dataset.category !== selected;
+        });
+      });
+    });
+  </script>
+</BaseLayout>

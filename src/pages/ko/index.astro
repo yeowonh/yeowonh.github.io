@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { siteKo as site } from '../../data/site';
+import { publications, awards } from '../../data/resume.ko';
+
+const featured = (await getCollection('projectsKo', ({ data }) => !data.draft && data.featured)).sort(
+  (a, b) => b.data.order - a.data.order,
+);
+
+const recognition = [
+  ...publications.map((p) => ({ icon: 'file', title: p.title, src: `${p.venue} · ${p.date}` })),
+  ...awards.map((a) => ({ icon: 'award', title: a.title, src: `${a.org} · ${a.date}` })),
+];
+---
+
+<BaseLayout heading="소개" locale="ko">
+  <div class="prose">
+    {site.intro.map((para) => <p>{para}</p>)}
+  </div>
+
+  <section class="section">
+    <h3 class="section-title">주요 업무</h3>
+    <ul class="services">
+      {
+        site.services.map((s) => (
+          <li class="service">
+            <div class="service-ico"><Icon name={s.icon} /></div>
+            <div>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">주요 프로젝트</h3>
+    <div class="work-list">
+      {
+        featured.map((entry) => (
+          <a class="work-row" href={`/ko/projects/${entry.id}`}>
+            <h4>{entry.data.title}</h4>
+            <span class="yr">{entry.data.period}</span>
+            <span class="cat">{entry.data.category}</span>
+            <p>{entry.data.summary}</p>
+          </a>
+        ))
+      }
+    </div>
+    <a class="more-link" href="/ko/projects">전체 프로젝트 →</a>
+  </section>
+
+  {
+    recognition.length > 0 && (
+      <section class="section">
+        <h3 class="section-title">주요 성과</h3>
+        <ul class="recog-grid">
+          {recognition.map((r) => (
+            <li class="recog">
+              <div class="recog-ico"><Icon name={r.icon} /></div>
+              <div>
+                <h4>{r.title}</h4>
+                <span class="src">{r.src}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</BaseLayout>

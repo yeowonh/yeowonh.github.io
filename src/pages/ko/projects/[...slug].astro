@@ -1,0 +1,62 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await getCollection('projectsKo', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, summary, category, period, role, stack, links } = entry.data;
+---
+
+<BaseLayout title={title} heading={title} description={summary} image={entry.data.cover?.src} locale="ko">
+  <section class="project-overview" aria-labelledby="project-overview-title">
+    <h2 class="project-kicker" id="project-overview-title">프로젝트 개요</h2>
+    <p class="project-summary">{summary}</p>
+    {
+      entry.data.cover && (
+        <Image
+          class="project-overview-cover"
+          src={entry.data.cover}
+          alt={entry.data.coverAlt ?? `${title} 프로젝트 썸네일`}
+          width={960}
+          height={720}
+        />
+      )
+    }
+  </section>
+
+  <dl class="detail-meta">
+    <div><dt>분야</dt><dd>{category}</dd></div>
+    <div><dt>기간</dt><dd>{period}</dd></div>
+    {role && <div class="meta-wide"><dt>역할</dt><dd>{role}</dd></div>}
+    {
+      stack.length > 0 && (
+        <div class="meta-wide">
+          <dt>기술 스택</dt>
+          <dd><ul class="stack-tags" aria-label="기술 스택">{stack.map((item) => <li>{item}</li>)}</ul></dd>
+        </div>
+      )
+    }
+    {
+      links.length > 0 && (
+        <div class="meta-wide">
+          <dt>링크</dt>
+          <dd>{links.map((link) => <a href={link.href} target="_blank" rel="noopener">{link.label}</a>)}</dd>
+        </div>
+      )
+    }
+  </dl>
+
+  <div class="content"><Content /></div>
+
+  <p style="margin-top:34px">
+    <a class="back" href="/ko/projects"><Icon name="arrowLeft" size={15} /> 전체 프로젝트</a>
+  </p>
+</BaseLayout>

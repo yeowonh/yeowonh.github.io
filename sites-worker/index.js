@@ -25,7 +25,7 @@ export default {
       if (htmlResponse.status !== 404) return preventIndexing(htmlResponse);
     }
 
-    url.pathname = '/404.html';
+    url.pathname = cleanPath === '/ko' || cleanPath.startsWith('/ko/') ? '/ko/404.html' : '/404.html';
     const notFound = await env.ASSETS.fetch(new Request(url, request));
     return preventIndexing(new Response(notFound.body, {
       status: 404,
