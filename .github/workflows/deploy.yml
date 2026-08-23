@@ -27,6 +27,8 @@ jobs:
 
       - name: Build with Astro
         uses: withastro/action@v6
+        with:
+          out-dir: dist/client
 
   deploy:
     needs: build
