@@ -4,6 +4,7 @@ summary: 18.8K개 학습 트리플릿과 1,921쌍 벤치마크를 기반으로 �
 category: NLP 연구
 period: '2025년'
 role: '공동 저자 · 벤치마크 및 모델'
+organization: 'Shinhan Investment Corp.'
 stack: ['PyTorch', 'Embeddings', 'STS', 'Finance NLP']
 cover: '../../assets/projects/nmixx.png'
 coverAlt: '도메인 적응 학습 전후의 NMIXX 모델 성능 비교'

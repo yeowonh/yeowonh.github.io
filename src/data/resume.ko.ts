@@ -12,11 +12,11 @@ import type {
  */
 export const experience: ExperienceItem[] = [
   {
-    role: '애널리틱스 엔지니어',
+    role: 'Analytics Engineer',
     company: '카카오모빌리티',
     period: '2026년 1월 ~ 현재',
-    kind: '정규직',
-    location: '대한민국 판교',
+    kind: 'Full-time',
+    location: 'Pangyo, South Korea',
     summary:
       '비즈니스 조직이 데이터 전문가를 기다리지 않고 질문에 답할 수 있도록 분석 시스템과 AI 기반 데이터 제품을 개발합니다.',
     highlights: [
@@ -29,23 +29,25 @@ export const experience: ExperienceItem[] = [
     stack: ['Python', 'SQL', 'LLM', 'MCP', 'ETL'],
   },
   {
-    role: 'AI 리서치 엔지니어',
+    role: 'AI Research Engineer',
     company: '엠로',
     period: '2025년 5월 ~ 2025년 12월',
-    kind: '정규직',
-    location: '대한민국 서울',
+    kind: 'Full-time',
+    location: 'Seoul, South Korea',
     summary: 'AI 연구 조직에서 엔터프라이즈 공급망 제품을 위한 응용 AI 기능을 개발했습니다.',
     highlights: [
       '공급사 업무를 위한 TableRAG 질의응답 어시스턴트를 구축해, 정보가 손실된 요약 대신 원본 테이블에 근거한 답변을 제공했습니다.',
+      '평가 데이터셋과 자동화된 품질 개선 루프를 구축하고 Hybrid Search, Text-to-SQL, Reranking을 결합해 베이스라인 대비 검색 정확도 140.3%, 답변 정확도 83.4% 향상을 달성했습니다.',
+      '질의 분해, 근거 검증, 미지원 질문 거절 안내를 포함하는 Agentic RAG 방향을 설계했습니다.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],
   },
   {
-    role: 'AI 엔지니어 인턴',
+    role: 'AI Engineer Intern',
     company: '신한투자증권',
     period: '2024년 8월 ~ 2024년 11월',
-    kind: '인턴십',
-    location: '대한민국 서울',
+    kind: 'Internship',
+    location: 'Seoul, South Korea',
     summary: 'AI Solutions 부서에서 금융 법률 특화 AI를 개발하고 한국어 금융 텍스트 임베딩 연구를 수행했습니다.',
     highlights: [
       '임직원용 법률 및 규정 QA 에이전트를 단순 검색에서 GraphRAG로 확장해, 조문과 시행령, 규칙 사이의 관계를 따라 답변할 수 있게 했습니다.',
@@ -55,11 +57,11 @@ export const experience: ExperienceItem[] = [
     stack: ['PyTorch', 'GraphRAG', 'Neo4j', 'Embeddings', 'RAG'],
   },
   {
-    role: '엔지니어링 교육생',
+    role: 'Engineering Trainee',
     company: '네이버 부스트캠프 AI Tech 6기 NLP 트랙',
     period: '2023년 11월 ~ 2024년 4월',
-    kind: '800시간 교육 과정',
-    location: '대한민국 서울 · 하이브리드',
+    kind: '800-hour traineeship',
+    location: 'Seoul, South Korea · Hybrid',
     summary: '대회, 팀 개발, 코드 리뷰를 통해 6개월간 집중적인 NLP 엔지니어링 과정을 수료했습니다.',
     highlights: [
       '문장 유사도, 관계 추출, 데이터 중심 NLP 대회에서 반복적인 오류 분석을 적용했습니다.',
@@ -134,7 +136,7 @@ export const awards: AwardItem[] = [
 
 export const certifications: CredentialItem[] = [
   {
-    name: 'SQLD, SQL 개발자',
+    name: 'SQLD (SQL Developer)',
     issuer: '한국데이터산업진흥원',
     detail: '2026년 3월 취득 · 2028년 3월까지 유효',
   },

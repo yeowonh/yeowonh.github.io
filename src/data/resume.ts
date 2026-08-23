@@ -81,7 +81,8 @@ export const experience: ExperienceItem[] = [
     summary: 'Developed applied AI capabilities for enterprise supply-chain products in the AI research group.',
     highlights: [
       'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables instead of lossy summaries.',
-      // TODO: what did it replace, and how much faster/cheaper was it?
+      'Built an evaluation dataset and automated quality loop, then combined hybrid retrieval, Text-to-SQL, and reranking to improve search accuracy by 140.3% and answer accuracy by 83.4% over the baseline.',
+      'Designed an Agentic RAG direction with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],
   },

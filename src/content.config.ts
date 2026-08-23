@@ -17,6 +17,8 @@ const createProjectsCollection = (base: string) => defineCollection({
       period: z.string(),
       /** Team size and what you owned */
       role: z.string().optional(),
+      /** Organization, employer, school, or project team behind the work */
+      organization: z.string().optional(),
       stack: z.array(z.string()).default([]),
       links: z.array(z.object({ label: z.string(), href: z.string().url() })).default([]),
 

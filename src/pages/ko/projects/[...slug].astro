@@ -14,7 +14,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, summary, category, period, role, stack, links } = entry.data;
+const { title, summary, category, period, role, organization, stack, links } = entry.data;
 const impact = projectImpacts.ko[entry.id];
 ---
 
@@ -38,6 +38,7 @@ const impact = projectImpacts.ko[entry.id];
   <dl class="detail-meta">
     <div><dt>분야</dt><dd>{category}</dd></div>
     <div><dt>기간</dt><dd>{period}</dd></div>
+    {organization && <div><dt>소속</dt><dd>{organization}</dd></div>}
     {role && <div class="meta-wide"><dt>역할</dt><dd>{role}</dd></div>}
     {
       stack.length > 0 && (

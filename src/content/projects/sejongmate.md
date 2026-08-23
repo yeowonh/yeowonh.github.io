@@ -4,6 +4,7 @@ summary: Led the end-to-end delivery of a campus information chatbot, from probl
 category: Conversational AI
 period: '2023'
 role: 'Team lead · End-to-end delivery'
+organization: 'Sejong University'
 stack: ['Python', 'NLP', 'Chatbot', 'API']
 cover: '../../assets/projects/sejongmate.png'
 coverAlt: 'SejongMate client, server, and database architecture'

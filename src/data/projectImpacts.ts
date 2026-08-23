@@ -54,6 +54,36 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
         },
       ],
     },
+    tablerag: {
+      eyebrow: 'Impact snapshot',
+      title: 'A measurable upgrade for table-grounded QA',
+      items: [
+        {
+          kind: 'comparison',
+          label: 'Retrieval and answer quality',
+          value: '+140.3% / +83.4%',
+          caption: 'Search and answer accuracy improvement over the baseline evaluation',
+          bars: [
+            { label: 'Search', amount: 140.3, display: '+140.3%' },
+            { label: 'Answer', amount: 83.4, display: '+83.4%' },
+          ],
+        },
+        {
+          kind: 'metric',
+          label: 'Reranking impact',
+          value: '+2.0%p',
+          caption: 'Answer accuracy lift from separately reranking search and SQL results',
+          tokens: ['Hybrid search', 'Text-to-SQL'],
+        },
+        {
+          kind: 'flow',
+          label: 'Evaluation operations',
+          value: 'Repeatable loop',
+          caption: 'A maintained dataset and automated score comparisons guide each change',
+          steps: ['Evaluation set', 'Pipeline change', 'Metric review'],
+        },
+      ],
+    },
     nmixx: {
       eyebrow: 'Impact snapshot',
       title: 'Measured model and benchmark gains',
@@ -281,6 +311,36 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
         },
       ],
     },
+    tablerag: {
+      eyebrow: '성과 한눈에 보기',
+      title: '테이블 기반 QA를 측정 가능한 품질 개선으로 전환',
+      items: [
+        {
+          kind: 'comparison',
+          label: '검색·답변 품질',
+          value: '+140.3% / +83.4%',
+          caption: '베이스라인 평가 대비 검색 및 답변 정확도 향상 폭',
+          bars: [
+            { label: '검색', amount: 140.3, display: '+140.3%' },
+            { label: '답변', amount: 83.4, display: '+83.4%' },
+          ],
+        },
+        {
+          kind: 'metric',
+          label: 'Reranking 효과',
+          value: '+2.0%p',
+          caption: '검색 결과와 SQL 결과를 분리 리랭킹해 얻은 답변 정확도 개선',
+          tokens: ['Hybrid Search', 'Text-to-SQL'],
+        },
+        {
+          kind: 'flow',
+          label: '평가 운영',
+          value: '반복 가능한 루프',
+          caption: '평가 데이터셋과 자동 점수 비교로 변경 효과를 지속 확인',
+          steps: ['평가 데이터셋', '파이프라인 변경', '지표 검토'],
+        },
+      ],
+    },
     nmixx: {
       eyebrow: '성과 한눈에 보기',
       title: '모델 개선 폭과 벤치마크 규모',
@@ -478,4 +538,3 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
     },
   },
 };
-

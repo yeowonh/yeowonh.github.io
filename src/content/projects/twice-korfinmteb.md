@@ -4,6 +4,7 @@ summary: Co-built and open-sourced KorFinMTEB, a 26-dataset benchmark across sev
 category: NLP Research
 period: 'Dec 2024 to Mar 2025'
 role: 'Benchmark construction & evaluation'
+organization: 'Shinhan Investment Corp.'
 stack: ['PyTorch', 'Embeddings', 'Evaluation', 'Finance NLP']
 cover: '../../assets/projects/twice.png'
 coverAlt: 'KorFinMTEB benchmark overview across seven task categories and 26 datasets'

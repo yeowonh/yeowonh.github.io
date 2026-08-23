@@ -4,6 +4,7 @@ summary: Built the retrieval chatbot for an award-winning support platform, grou
 category: Conversational AI
 period: 'Aug 2024 to Apr 2025'
 role: 'Retrieval chatbot · Data, storage, chat agent'
+organization: 'HelloWorld-AICC team'
 stack: ['Python', 'LangChain', 'MongoDB', 'Azure', 'RAG']
 cover: '../../assets/projects/helloworld.png'
 coverAlt: 'Hello World mobile service screens for migrant workers'

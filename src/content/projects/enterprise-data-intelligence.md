@@ -4,6 +4,7 @@ summary: Launched an AI-assisted data intelligence platform across web, MCP, and
 category: Enterprise AI
 period: 'Jan 2026 to Present'
 role: 'Analytics Engineer · Product, AI agent, retrieval, evaluation'
+organization: 'Kakao Mobility'
 stack: ['Python', 'LangGraph', 'FastAPI', 'Next.js', 'BigQuery', 'Airflow', 'MCP', 'Langfuse']
 cover: '../../assets/projects/enterprise-data-intelligence.png'
 coverAlt: 'Privacy-safe enterprise data assistant interface with query, catalog, lineage, and quality views'

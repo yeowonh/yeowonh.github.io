@@ -4,6 +4,7 @@ summary: 웹, MCP, 메신저 업무 흐름을 연결한 AI 기반 데이터 인�
 category: 엔터프라이즈 AI
 period: '2026년 1월 ~ 현재'
 role: '애널리틱스 엔지니어 · 제품, AI 에이전트, 검색, 평가'
+organization: '카카오모빌리티'
 stack: ['Python', 'LangGraph', 'FastAPI', 'Next.js', 'BigQuery', 'Airflow', 'MCP', 'Langfuse']
 cover: '../../assets/projects/enterprise-data-intelligence.png'
 coverAlt: '쿼리, 카탈로그, 리니지, 품질 화면을 담은 보안 친화적인 엔터프라이즈 데이터 어시스턴트 인터페이스'

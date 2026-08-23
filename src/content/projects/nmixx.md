@@ -4,6 +4,7 @@ summary: Co-developed a Korean finance embedding model that improved Spearman co
 category: NLP Research
 period: '2025'
 role: 'Co-author · Benchmark & model'
+organization: 'Shinhan Investment Corp.'
 stack: ['PyTorch', 'Embeddings', 'STS', 'Finance NLP']
 cover: '../../assets/projects/nmixx.png'
 coverAlt: 'NMIXX model performance before and after domain-adaptive training'

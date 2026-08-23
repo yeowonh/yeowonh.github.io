@@ -4,6 +4,7 @@ summary: Extended an employee-facing financial law QA agent from flat retrieval 
 category: Knowledge Graph
 period: 'Aug 2024 to Nov 2024'
 role: 'AI Engineer Intern · Shinhan Investment Corp.'
+organization: 'Shinhan Investment Corp.'
 stack: ['Python', 'GraphRAG', 'Neo4j', 'LLM', 'Vertical AI']
 cover: '../../assets/projects/shinhan-graphrag.png'
 coverAlt: 'GraphRAG indexing, retrieval, and generation pipeline for legal QA'

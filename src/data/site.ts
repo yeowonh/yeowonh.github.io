@@ -18,9 +18,8 @@ export const site = {
    * Adapted from the LinkedIn summary. Edit freely; this is your voice.
    */
   intro: [
-    'I build reliable AI and data products that turn complex information into decisions people can act on. At Kakao Mobility, I develop analytics systems and self-service data tools used across business teams. Before that, I shipped retrieval-based assistants and Korean finance NLP research.',
-    'My work spans the full path from an ambiguous question to a production system: data modeling, retrieval and evaluation, APIs and interfaces, and the feedback loops that keep quality improving. I care about measurable adoption as much as model performance; one internal product grew monthly active users (MAU) roughly 6× in six months.',
-    'I work at the boundary of research, engineering, and the people using the product. I make trade-offs explicit, build evidence before scaling, and document what I learn at ll2ll.tistory.com.',
+    'I am an Analytics Engineer and AI Systems builder who turns ambiguous business questions into reliable, measurable products. At Kakao Mobility, I build self-service data systems and AI workflows for business teams; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
+    'I connect data, retrieval, evaluation, APIs, and user feedback into one product loop. I care about adoption as much as model quality: I make trade-offs explicit, validate with evidence, and turn production learning into the next improvement. One internal product grew monthly active users (MAU) roughly 6× in six months.',
   ],
 
   url: 'https://yeowonh.github.io',
@@ -48,34 +47,33 @@ export const site = {
   services: [
     {
       icon: 'sparkles',
-      title: 'AI Products',
-      text: 'Retrieval-based assistants for multilingual counseling, enterprise Q&A, and everyday dialogue, designed around trustworthy answers and real user workflows.',
+      title: 'AI Product Development',
+      text: 'Turn retrieval, LLM, and agent capabilities into user-facing products with clear outcomes.',
     },
     {
       icon: 'network',
       title: 'Retrieval & Evaluation',
-      text: 'RAG pipelines, hard negative mining, and Korean domain embeddings, paired with benchmarks and evaluation sets that make quality measurable.',
+      text: 'Design evidence-grounded RAG and evaluation systems that make quality visible and improvable.',
     },
     {
       icon: 'database',
-      title: 'Analytics & Data Products',
-      text: 'Clear data models, tested transformations, shared metrics, and self-service tools that let more people answer questions with confidence.',
+      title: 'Analytics Engineering',
+      text: 'Model data, define trusted metrics, and build self-service workflows for better business decisions.',
     },
     {
       icon: 'server',
-      title: 'Production Engineering',
-      text: 'Serving models through dependable APIs with Azure Functions, FastAPI, Docker, and GitHub Actions, then improving them with usage and feedback data.',
+      title: 'Production Delivery',
+      text: 'Take systems from prototype to reliable operation through APIs, observability, and feedback.',
     },
   ],
 } as const;
 
 export const siteKo = {
   ...site,
-  title: '애널리틱스 엔지니어 · AI 시스템',
+  title: 'Analytics Engineer · AI Systems',
   intro: [
-    '복잡한 정보를 사람들이 실제로 행동할 수 있는 의사결정으로 바꾸는 신뢰도 높은 AI·데이터 제품을 만듭니다. 카카오모빌리티에서 여러 비즈니스 조직이 활용하는 분석 시스템과 셀프서비스 데이터 도구를 개발하고 있습니다. 이전에는 검색 기반 어시스턴트와 한국어 금융 NLP 연구를 수행했습니다.',
-    '모호한 질문을 프로덕션 시스템으로 만드는 전 과정을 다룹니다. 데이터 모델링, 검색과 평가, API와 인터페이스, 품질을 지속적으로 높이는 피드백 루프까지 연결합니다. 모델 성능만큼 실제 사용과 확산을 중요하게 생각하며, 사내 제품 한 곳의 MAU(월간 활성 사용자 수)를 6개월 동안 약 6배 성장시켰습니다.',
-    '연구, 엔지니어링, 실제 사용자 사이의 경계에서 일합니다. 선택과 트레이드오프를 명확히 하고, 확장 전에 근거를 만들며, 배운 내용을 ll2ll.tistory.com에 기록합니다.',
+    'Analytics Engineer이자 AI Systems builder로서, 모호한 비즈니스 질문을 신뢰할 수 있고 측정 가능한 제품으로 구현합니다. 카카오모빌리티에서 비즈니스 조직이 직접 활용하는 셀프서비스 데이터 시스템과 AI 워크플로를 만들고, 이전에는 검색·GraphRAG 어시스턴트와 한국어 금융 언어 모델을 개발했습니다.',
+    '데이터와 검색, 평가, API, 사용자 피드백을 하나의 제품 루프로 연결합니다. 모델 성능에 그치지 않고 실제 채택과 운영 품질을 함께 보며, 근거로 트레이드오프를 설명하고 빠르게 검증해 다음 개선으로 이어갑니다. 사내 제품 한 곳의 MAU(월간 활성 사용자 수)를 6개월 동안 약 6배 성장시킨 경험이 있습니다.',
   ],
   location: '대한민국 성남',
   availability: '데이터·AI 분야의 새로운 기회에 열려 있습니다',
@@ -87,23 +85,23 @@ export const siteKo = {
   services: [
     {
       icon: 'sparkles',
-      title: 'AI 제품',
-      text: '다국어 상담, 엔터프라이즈 Q&A, 일상 대화를 위한 검색 기반 어시스턴트를 설계합니다. 신뢰할 수 있는 답변과 실제 사용자 흐름을 중심에 둡니다.',
+      title: 'AI Product Development',
+      text: '검색, LLM, 에이전트 기술을 실제 사용자 문제와 측정 가능한 제품 성과로 연결합니다.',
     },
     {
       icon: 'network',
-      title: '검색 및 평가',
-      text: 'RAG 파이프라인, 하드 네거티브 마이닝, 한국어 도메인 임베딩을 구축하고 벤치마크와 평가 세트로 품질을 측정합니다.',
+      title: 'Retrieval & Evaluation',
+      text: '근거 중심 RAG와 평가 체계를 설계해 답변 품질을 보이게 만들고 지속적으로 개선합니다.',
     },
     {
       icon: 'database',
-      title: '분석 및 데이터 제품',
-      text: '명확한 데이터 모델, 검증된 변환, 공통 지표, 셀프서비스 도구를 통해 더 많은 사람이 확신을 갖고 질문에 답할 수 있게 합니다.',
+      title: 'Analytics Engineering',
+      text: '신뢰할 수 있는 데이터 모델과 지표, 셀프서비스 워크플로로 비즈니스 의사결정을 지원합니다.',
     },
     {
       icon: 'server',
-      title: '프로덕션 엔지니어링',
-      text: 'Azure Functions, FastAPI, Docker, GitHub Actions로 모델을 안정적인 API로 제공하고 사용 및 피드백 데이터로 지속해서 개선합니다.',
+      title: 'Production Delivery',
+      text: '프로토타입을 안정적인 API와 운영 가능한 제품으로 전환하고 사용 데이터로 고도화합니다.',
     },
   ],
 } as const;

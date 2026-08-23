@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import { siteKo as site } from '../../data/site';
@@ -9,10 +10,10 @@ const featured = (await getCollection('projectsKo', ({ data }) => !data.draft &&
   (a, b) => b.data.order - a.data.order,
 );
 
-const recognition = [
-  ...publications.map((p) => ({ icon: 'file', title: p.title, src: `${p.venue} · ${p.date}` })),
-  ...awards.map((a) => ({ icon: 'award', title: a.title, src: `${a.org} · ${a.date}` })),
-];
+const featuredGroups = Array.from(new Set(featured.map((entry) => entry.data.category))).map((category) => ({
+  category,
+  entries: featured.filter((entry) => entry.data.category === category),
+}));
 ---
 
 <BaseLayout heading="소개" locale="ko">
@@ -39,37 +40,79 @@ const recognition = [
 
   <section class="section">
     <h3 class="section-title">주요 프로젝트</h3>
-    <div class="work-list">
+    <div class="work-groups">
       {
-        featured.map((entry) => (
-          <a class="work-row" href={`/ko/projects/${entry.id}`}>
-            <h4>{entry.data.title}</h4>
-            <span class="yr">{entry.data.period}</span>
-            <span class="cat">{entry.data.category}</span>
-            <p>{entry.data.summary}</p>
-          </a>
+        featuredGroups.map((group) => (
+          <section class="work-group">
+            <h4 class="work-group-title">{group.category}</h4>
+            <div class="work-list">
+              {
+                group.entries.map((entry) => (
+                  <a class="work-row" href={`/ko/projects/${entry.id}`}>
+                    <div class="work-row-thumb">
+                      {entry.data.cover ? (
+                        <Image src={entry.data.cover} alt={entry.data.coverAlt ?? entry.data.title} width={192} height={144} />
+                      ) : (
+                        <div class:list={['work-row-thumb-fallback', entry.data.tint]}>
+                          <span>{entry.data.mark || entry.data.title.slice(0, 2)}</span>
+                        </div>
+                      )}
+                    </div>
+                    <div class="work-row-main">
+                      <div class="work-row-head">
+                        <h5>{entry.data.title}</h5>
+                        <span class="yr">{entry.data.period}</span>
+                      </div>
+                      {entry.data.organization && <span class="org">{entry.data.organization}</span>}
+                      <span class="cat">{entry.data.category}</span>
+                      <p>{entry.data.summary}</p>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </section>
         ))
       }
     </div>
     <a class="more-link" href="/ko/projects">전체 프로젝트 →</a>
   </section>
 
-  {
-    recognition.length > 0 && (
-      <section class="section">
-        <h3 class="section-title">주요 성과</h3>
-        <ul class="recog-grid">
-          {recognition.map((r) => (
-            <li class="recog">
-              <div class="recog-ico"><Icon name={r.icon} /></div>
-              <div>
-                <h4>{r.title}</h4>
-                <span class="src">{r.src}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )
-  }
+  {publications.length > 0 && (
+    <section class="section">
+      <h3 class="section-title">논문·연구 성과</h3>
+      <ul class="recog-grid">
+        {publications.map((publication) => (
+          <li class="recog">
+            <div class="recog-ico"><Icon name="file" /></div>
+            <div>
+              <h4>
+                {publication.href ? (
+                  <a href={publication.href} target="_blank" rel="noopener">{publication.title}</a>
+                ) : publication.title}
+              </h4>
+              <span class="src">{publication.venue} · {publication.date}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {awards.length > 0 && (
+    <section class="section">
+      <h3 class="section-title">대회·수상</h3>
+      <ul class="recog-grid">
+        {awards.map((award) => (
+          <li class="recog">
+            <div class="recog-ico"><Icon name="award" /></div>
+            <div>
+              <h4>{award.title}</h4>
+              <span class="src">{award.org} · {award.date}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 </BaseLayout>

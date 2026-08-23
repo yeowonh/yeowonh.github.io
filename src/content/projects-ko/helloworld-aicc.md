@@ -4,6 +4,7 @@ summary: 실제 상담 사례에 근거해 다국어로 답하고 핵심 대화 
 category: 대화형 AI
 period: '2024년 8월 ~ 2025년 4월'
 role: '검색 챗봇 · 데이터, 저장소, 채팅 에이전트'
+organization: 'HelloWorld-AICC team'
 stack: ['Python', 'LangChain', 'MongoDB', 'Azure', 'RAG']
 cover: '../../assets/projects/helloworld.png'
 coverAlt: '이주노동자를 위한 Hello World 모바일 서비스 화면'

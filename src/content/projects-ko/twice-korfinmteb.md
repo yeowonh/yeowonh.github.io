@@ -4,6 +4,7 @@ summary: 7개 과제와 26개 데이터셋으로 구성된 KorFinMTEB를 공동 
 category: NLP 연구
 period: '2024년 12월 ~ 2025년 3월'
 role: '벤치마크 구축 및 평가'
+organization: 'Shinhan Investment Corp.'
 stack: ['PyTorch', 'Embeddings', 'Evaluation', 'Finance NLP']
 cover: '../../assets/projects/twice.png'
 coverAlt: '7개 과제 유형과 26개 데이터셋으로 구성된 KorFinMTEB 벤치마크 개요'

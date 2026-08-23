@@ -4,6 +4,7 @@ summary: 임직원용 금융 법률 QA 에이전트를 단순 검색에서 Graph
 category: 지식 그래프
 period: '2024년 8월 ~ 2024년 11월'
 role: 'AI 엔지니어 인턴 · 신한투자증권'
+organization: '신한투자증권'
 stack: ['Python', 'GraphRAG', 'Neo4j', 'LLM', 'Vertical AI']
 cover: '../../assets/projects/shinhan-graphrag.png'
 coverAlt: '법률 QA를 위한 GraphRAG 인덱싱, 검색, 생성 파이프라인'

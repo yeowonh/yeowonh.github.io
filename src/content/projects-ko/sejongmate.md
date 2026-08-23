@@ -4,6 +4,7 @@ summary: 문제 정의와 데이터 수집부터 모델링, API 개발, 베타 �
 category: 대화형 AI
 period: '2023년'
 role: '팀장 · 엔드투엔드 개발'
+organization: '세종대학교'
 stack: ['Python', 'NLP', 'Chatbot', 'API']
 cover: '../../assets/projects/sejongmate.png'
 coverAlt: 'SejongMate 클라이언트, 서버, 데이터베이스 아키텍처'
