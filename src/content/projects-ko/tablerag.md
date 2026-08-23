@@ -1,12 +1,12 @@
 ---
 title: 'TableRAG: 엔터프라이즈 테이블 기반 QA'
 summary: 엔터프라이즈 공급망 업무를 위한 테이블 특화 RAG 파이프라인을 고도화하고, Hybrid Search와 Text-to-SQL을 결합해 검색·답변 품질을 개선했습니다.
-category: 엔터프라이즈 AI
+category: Enterprise AI
 period: '2025년 5월 ~ 2025년 12월'
 role: 'AI Research Engineer · RAG, 평가, 파이프라인 설계'
-organization: '엠로'
+organization: 'emro'
 stack: ['Python', 'RAG', 'Text-to-SQL', 'OpenSearch', 'Reranking']
-cover: '../../assets/projects/tablerag.svg'
+cover: '../../assets/projects/tablerag-v2.svg'
 coverAlt: '구조화 테이블과 근거 기반 답변을 연결하는 TableRAG 파이프라인 추상 이미지'
 tint: tint-1
 mark: TR

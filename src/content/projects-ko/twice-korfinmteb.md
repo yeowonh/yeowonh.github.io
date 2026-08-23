@@ -1,7 +1,7 @@
 ---
 title: 'TWICE: 한국어 금융 임베딩 벤치마크'
 summary: 7개 과제와 26개 데이터셋으로 구성된 KorFinMTEB를 공동 구축·공개해 번역 기반 금융 평가가 가리던 5%에서 8%의 성능 격차를 확인했습니다.
-category: NLP 연구
+category: NLP Research
 period: '2024년 12월 ~ 2025년 3월'
 role: '벤치마크 구축 및 평가'
 organization: 'Shinhan Investment Corp.'

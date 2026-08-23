@@ -64,9 +64,9 @@ export const experience: ExperienceItem[] = [
     summary:
       'Builds analytics systems and AI-assisted data products that help business teams answer questions without waiting on a specialist.',
     highlights: [
-      'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. Monthly active users (MAU) grew roughly 6× in six months.',
-      'Established the product quality system: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
-      'Closed the feedback loop with automated follow-ups, inbound feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
+      'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. **Reached 151 MAU and 60.9K requests across Web, MCP, and Slack**, while average response time fell **81% from 21.5s to 4.0s**.',
+      '**Built the product quality system**: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
+      '**Closed the feedback loop** with automated follow-ups, inbound feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
       'Converted scattered domain expertise into a reviewed knowledge asset. Domain experts contribute, experiments validate changes, and approved gaps flow back into the system automatically; the approach was piloted against a held-out evaluation set.',
       'Owned metric operations and ad hoc analysis across marketing, CX, billing, and logistics, including aggregation logic changes with complete historical backfills.',
     ],
@@ -81,7 +81,7 @@ export const experience: ExperienceItem[] = [
     summary: 'Developed applied AI capabilities for enterprise supply-chain products in the AI research group.',
     highlights: [
       'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables instead of lossy summaries.',
-      'Built an evaluation dataset and automated quality loop, then combined hybrid retrieval, Text-to-SQL, and reranking to improve search accuracy by 140.3% and answer accuracy by 83.4% over the baseline.',
+      'Built an evaluation dataset and automated quality loop, then combined hybrid retrieval, Text-to-SQL, and reranking to deliver **+140.3% search accuracy** and **+83.4% answer accuracy** over the baseline.',
       'Designed an Agentic RAG direction with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],
@@ -96,7 +96,7 @@ export const experience: ExperienceItem[] = [
       'Developed vertical AI for financial law and conducted embedding research for Korean financial text in the AI Solutions division.',
     highlights: [
       'Extended an employee-facing legal and regulatory QA agent from flat retrieval to GraphRAG, enabling answers to follow relationships between provisions, enforcement decrees, and rules.',
-      'Co-authored TWICE (ICLR 2025 Workshop) and NMIXX (CIKM 2025 Workshop) on Korean financial embeddings and benchmarks.',
+      '**Co-authored TWICE (ICLR 2025 Workshop) and NMIXX (CIKM 2025 Workshop)** on Korean financial embeddings and benchmarks.',
       'Ran hard-negative-mining experiments for Korean financial retrieval and published the write-up as a Hugging Face community article.',
     ],
     stack: ['PyTorch', 'GraphRAG', 'Neo4j', 'Embeddings', 'RAG'],

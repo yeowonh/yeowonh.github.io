@@ -1,7 +1,7 @@
 ---
 title: 'My Bestie: 나를 기억하는 챗봇'
 summary: 7명의 NLP 팀과 함께 사용자를 기억하는 개인화 대화 챗봇을 구축하고 배포해, 한 달간의 부스트캠프 프로젝트를 공개 전시까지 발전시켰습니다.
-category: 대화형 AI
+category: Conversational AI
 period: '2024년 3월 ~ 2024년 4월'
 role: 'NLP · 7인 팀'
 stack: ['Python', 'NLP', 'LLM', 'Chatbot']

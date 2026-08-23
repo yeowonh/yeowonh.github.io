@@ -1,6 +1,6 @@
 ---
 title: Enterprise Data Intelligence Platform
-summary: Launched an AI-assisted data intelligence platform across web, MCP, and messaging workflows, growing monthly active users (MAU) roughly 6× in six months.
+summary: Launched an AI-assisted data intelligence platform across Web, MCP, and Slack, reaching 151 MAU and 60.9K requests in the latest observed period while cutting average response time by 81%.
 category: Enterprise AI
 period: 'Jan 2026 to Present'
 role: 'Analytics Engineer · Product, AI agent, retrieval, evaluation'
@@ -44,14 +44,14 @@ request.
 
 ## Result
 
-- **Product adoption | MAU grew roughly 6× in six months.** Expanded the product from data discovery
-  into a repeatable self-service path for understanding and using enterprise data.
-- **Distribution | Reached users through three product surfaces.** Delivered one governed knowledge
-  layer through a non-technical web experience, an MCP interface for AI development tools, and
-  messaging workflows.
-- **Quality operations | Institutionalized daily, weekly, and biweekly feedback cycles.** Combined
-  daily adoption telemetry, weekly consistency audits, session-level LLM scoring, and biweekly user
-  interviews to turn production failures into prioritized, evaluated improvements.
+- **Usage scale | Recorded 60.9K requests across three product surfaces.** From Jun 24 to Aug 22,
+  the product supported 178 active users and 1,621 sessions across Web, MCP, and Slack.
+- **Adoption | Reached 151 MAU in August MTD, up 6.3× from March.** The product moved beyond a
+  discovery tool into a repeatable self-service path for understanding and using enterprise data.
+- **Performance | Cut average response time from 21.5s to 4.0s, an 81% reduction.** P90 latency
+  also fell from 38.6s to 6.8s as usage expanded.
+- **Quality operations | Sustained 99.7% Web Trace completion in the latest 30-day window.**
+  Reviewed 2,173 traces through daily telemetry, scheduled audits, and session-level evaluation.
 - **Governance | Made trust controls part of the user experience.** Permission-aware retrieval,
   guarded query execution, visible evidence, and lineage became product contracts rather than
   hidden implementation details.

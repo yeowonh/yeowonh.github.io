@@ -1,10 +1,10 @@
 ---
 title: 'SejongMate: 교내 정보 Q&A 챗봇'
 summary: 문제 정의와 데이터 수집부터 모델링, API 개발, 베타 피드백과 개선까지 교내 정보 챗봇의 전 과정을 팀장으로서 이끌었습니다.
-category: 대화형 AI
+category: Conversational AI
 period: '2023년'
 role: '팀장 · 엔드투엔드 개발'
-organization: '세종대학교'
+organization: 'Sejong University'
 stack: ['Python', 'NLP', 'Chatbot', 'API']
 cover: '../../assets/projects/sejongmate.png'
 coverAlt: 'SejongMate 클라이언트, 서버, 데이터베이스 아키텍처'
@@ -34,7 +34,7 @@ order: 40
 
 ## 성과
 
-- **외부 검증 | 세종대학교 제15회 창의설계경진대회 우수상, 2위 수상.**
+- **외부 검증 | Sejong University 제15회 창의설계경진대회 우수상, 2위 수상.**
 - **엔드투엔드 실행 | 문제 정의에서 동작하는 베타 서비스까지 완주.** 코퍼스 구축, NLP 모델링,
   API 제공을 하나의 제품 계획으로 연결했습니다.
 - **사용자 피드백 | 재학생과 졸업생의 의견으로 다음 개선 우선순위 결정.** 내부 가정 대신 실제

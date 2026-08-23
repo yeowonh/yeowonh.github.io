@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
+import HighlightText from '../../components/HighlightText.astro';
 import { siteKo as site } from '../../data/site';
 import {
   experience,
@@ -31,7 +32,7 @@ import {
             </span>
             {job.summary && <p>{job.summary}</p>}
             {job.highlights.length > 0 && (
-              <ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+              <ul>{job.highlights.map((highlight) => <li><HighlightText text={highlight} /></li>)}</ul>
             )}
             {job.stack && job.stack.length > 0 && <p class="tags">{job.stack.join(' · ')}</p>}
           </li>

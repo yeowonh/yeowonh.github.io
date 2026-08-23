@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import HighlightText from '../components/HighlightText.astro';
 import { site } from '../data/site';
 import {
   experience,
@@ -33,7 +34,7 @@ import {
             {job.highlights.length > 0 && (
               <ul>
                 {job.highlights.map((h) => (
-                  <li>{h}</li>
+                  <li><HighlightText text={h} /></li>
                 ))}
               </ul>
             )}

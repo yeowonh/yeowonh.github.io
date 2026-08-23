@@ -1,7 +1,7 @@
 ---
 title: 'NMIXX: 한국어 금융 임베딩'
 summary: 18.8K개 학습 트리플릿과 1,921쌍 벤치마크를 기반으로 한국어 금융 임베딩 모델을 공동 개발해 KorFinSTS Spearman 상관계수를 +0.22 개선했습니다.
-category: NLP 연구
+category: NLP Research
 period: '2025년'
 role: '공동 저자 · 벤치마크 및 모델'
 organization: 'Shinhan Investment Corp.'

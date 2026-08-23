@@ -1,10 +1,10 @@
 ---
 title: 금융 법률 GraphRAG 에이전트
 summary: 임직원용 금융 법률 QA 에이전트를 단순 검색에서 GraphRAG로 확장해, 서로 연결된 조문 사이의 인용과 위임 관계를 따라 답변할 수 있게 했습니다.
-category: 지식 그래프
+category: Enterprise AI
 period: '2024년 8월 ~ 2024년 11월'
-role: 'AI 엔지니어 인턴 · 신한투자증권'
-organization: '신한투자증권'
+role: 'AI Engineer Intern · Shinhan Investment Corp.'
+organization: 'Shinhan Investment Corp.'
 stack: ['Python', 'GraphRAG', 'Neo4j', 'LLM', 'Vertical AI']
 cover: '../../assets/projects/shinhan-graphrag.png'
 coverAlt: '법률 QA를 위한 GraphRAG 인덱싱, 검색, 생성 파이프라인'

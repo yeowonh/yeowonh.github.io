@@ -430,6 +430,11 @@ img { display: block; max-width: 100%; height: auto; }
   max-width: 76ch;
 }
 
+.tl-item li strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
 .tl-item li::before {
   content: '';
   position: absolute;
@@ -1171,15 +1176,33 @@ img { display: block; max-width: 100%; height: auto; }
    ABOUT: selected work list + recognition
    -------------------------------------------------------------------------- */
 
-.work-groups { display: grid; gap: 30px; }
+.work-groups { display: grid; gap: 18px; }
+
+.work-group {
+  overflow: hidden;
+  padding: 18px 20px 4px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: var(--card-inner);
+}
 
 .work-group-title {
-  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
   color: var(--accent);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.work-group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-soft);
 }
 
 .work-list { display: grid; }
@@ -1197,7 +1220,8 @@ img { display: block; max-width: 100%; height: auto; }
 
 .work-row-thumb {
   width: 104px;
-  aspect-ratio: 4 / 3;
+  height: 78px;
+  flex-shrink: 0;
   overflow: hidden;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-xs);
@@ -1313,7 +1337,7 @@ img { display: block; max-width: 100%; height: auto; }
   .recog-grid { grid-template-columns: 1fr; }
 
   .work-row { grid-template-columns: 78px minmax(0, 1fr); gap: 12px; }
-  .work-row-thumb { width: 78px; }
+  .work-row-thumb { width: 78px; height: 58px; }
   .work-row-head { display: block; }
   .work-row .yr { display: block; margin-top: 3px; }
 }

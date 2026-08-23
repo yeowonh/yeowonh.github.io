@@ -10,9 +10,7 @@ interface Props {
 
 const { locale = 'en' } = Astro.props;
 const site = getSite(locale);
-const labels = locale === 'ko'
-  ? { email: '이메일', location: '위치', status: '상태', portrait: `${site.name} 프로필 사진` }
-  : { email: 'Email', location: 'Location', status: 'Status', portrait: `Portrait of ${site.name}` };
+const labels = { email: 'Email', location: 'Location', status: 'Status', portrait: `Portrait of ${site.name}` };
 
 const socials = [
   { label: 'GitHub', href: site.links.github, icon: 'github' },

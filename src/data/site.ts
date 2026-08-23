@@ -18,8 +18,8 @@ export const site = {
    * Adapted from the LinkedIn summary. Edit freely; this is your voice.
    */
   intro: [
-    'I am an Analytics Engineer and AI Systems builder who turns ambiguous business questions into reliable, measurable products. At Kakao Mobility, I build self-service data systems and AI workflows for business teams; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
-    'I connect data, retrieval, evaluation, APIs, and user feedback into one product loop. I care about adoption as much as model quality: I make trade-offs explicit, validate with evidence, and turn production learning into the next improvement. One internal product grew monthly active users (MAU) roughly 6× in six months.',
+    'I am an Analytics Engineer and AI Systems builder who turns ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
+    'I connect data, retrieval, evaluation, APIs, and user feedback into one product loop. I care about adoption, quality, and speed in production, make trade-offs explicit, and turn operating signals into the next improvement.',
   ],
 
   url: 'https://yeowonh.github.io',
@@ -72,11 +72,11 @@ export const siteKo = {
   ...site,
   title: 'Analytics Engineer · AI Systems',
   intro: [
-    'Analytics Engineer이자 AI Systems builder로서, 모호한 비즈니스 질문을 신뢰할 수 있고 측정 가능한 제품으로 구현합니다. 카카오모빌리티에서 비즈니스 조직이 직접 활용하는 셀프서비스 데이터 시스템과 AI 워크플로를 만들고, 이전에는 검색·GraphRAG 어시스턴트와 한국어 금융 언어 모델을 개발했습니다.',
-    '데이터와 검색, 평가, API, 사용자 피드백을 하나의 제품 루프로 연결합니다. 모델 성능에 그치지 않고 실제 채택과 운영 품질을 함께 보며, 근거로 트레이드오프를 설명하고 빠르게 검증해 다음 개선으로 이어갑니다. 사내 제품 한 곳의 MAU(월간 활성 사용자 수)를 6개월 동안 약 6배 성장시킨 경험이 있습니다.',
+    'Analytics Engineer이자 AI Systems builder입니다. 모호한 비즈니스 질문을 신뢰할 수 있는 제품으로 바꾸며, Kakao Mobility에서는 셀프서비스 데이터 시스템과 AI 워크플로를, 이전에는 retrieval·GraphRAG assistant와 Korean finance language model을 개발했습니다.',
+    '데이터와 검색, 평가, API, 사용자 피드백을 하나의 제품 루프로 연결합니다. 모델 성능과 실제 채택, 운영 속도를 함께 보고, 운영 데이터에서 다음 개선의 근거를 찾습니다.',
   ],
-  location: '대한민국 성남',
-  availability: '데이터·AI 분야의 새로운 기회에 열려 있습니다',
+  location: 'Seongnam, South Korea',
+  availability: 'Open to data & AI opportunities',
   nav: [
     { href: '/', label: '소개' },
     { href: '/resume', label: '이력' },

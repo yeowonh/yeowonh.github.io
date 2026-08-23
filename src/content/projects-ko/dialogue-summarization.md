@@ -1,7 +1,7 @@
 ---
 title: 다자간 대화 요약
 summary: 여러 사람이 나누는 대화에서 주제를 구분해 요약하는 파이프라인을 구축하고, 리더보드 5위로 국립국어원 경진대회 본선에 진출했습니다.
-category: NLP 연구
+category: NLP Research
 period: '2024년 8월'
 role: '데이터 분석 및 모델링'
 stack: ['Python', 'PyTorch', 'LLM', 'Quantization']

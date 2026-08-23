@@ -6,7 +6,7 @@ period: 'May 2025 to Dec 2025'
 role: 'AI Research Engineer · RAG, evaluation, pipeline design'
 organization: 'emro'
 stack: ['Python', 'RAG', 'Text-to-SQL', 'OpenSearch', 'Reranking']
-cover: '../../assets/projects/tablerag.svg'
+cover: '../../assets/projects/tablerag-v2.svg'
 coverAlt: 'Abstract TableRAG pipeline connecting structured tables with grounded answers'
 tint: tint-1
 mark: TR

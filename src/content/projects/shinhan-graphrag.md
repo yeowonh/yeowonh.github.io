@@ -1,7 +1,7 @@
 ---
 title: GraphRAG Agent for Financial Law
 summary: Extended an employee-facing financial law QA agent from flat retrieval to GraphRAG so answers could follow citations and delegation across related provisions.
-category: Knowledge Graph
+category: Enterprise AI
 period: 'Aug 2024 to Nov 2024'
 role: 'AI Engineer Intern · Shinhan Investment Corp.'
 organization: 'Shinhan Investment Corp.'
