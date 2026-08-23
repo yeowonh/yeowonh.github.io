@@ -46,6 +46,7 @@ const categories = ['All', ...new Set(entries.map((e) => e.data.category))];
                 alt={entry.data.coverAlt ?? entry.data.title}
                 width={640}
                 height={480}
+                fit="contain"
               />
             ) : (
               <div class:list={['thumb', entry.data.tint]}>

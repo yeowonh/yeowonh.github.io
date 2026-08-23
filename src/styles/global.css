@@ -522,7 +522,9 @@ img { display: block; max-width: 100%; height: auto; }
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--card-inner);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-soft);
   overflow: hidden;
@@ -617,9 +619,11 @@ img { display: block; max-width: 100%; height: auto; }
 .project-overview-cover {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
   margin-top: 20px;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--card-inner);
   border: 1px solid hsl(226, 42%, 84%);
   border-radius: calc(var(--radius-sm) - 3px);
   box-shadow: 0 12px 30px hsla(228, 40%, 24%, 0.12);
@@ -1006,9 +1010,9 @@ img { display: block; max-width: 100%; height: auto; }
 .print-btn:hover { border-color: var(--accent); color: var(--accent); }
 
 @media print {
-  @page { margin: 1.4cm 1.5cm; }
+  @page { size: A4; margin: 1.05cm 1.25cm; }
 
-  body { background: #fff; font-size: 10.5pt; line-height: 1.5; }
+  body { background: #fff; font-size: 9.4pt; line-height: 1.42; }
 
   .shell { display: block; max-width: none; padding: 0; }
 
@@ -1043,17 +1047,22 @@ img { display: block; max-width: 100%; height: auto; }
   .fact-value { display: inline; font-size: 9.5pt; }
 
   .main { min-height: 0; }
-  .body { padding: 14px 0 0; }
-  .page-title { font-size: 15pt; padding-right: 0; }
+  .body { padding: 10px 0 0; }
+  .page-title { margin-bottom: 6px; font-size: 15pt; padding-right: 0; }
   .page-title::after { display: none; }
-  .section { margin-top: 16px; break-inside: avoid; }
+  .section { margin-top: 13px; break-inside: auto; page-break-inside: auto; }
   .section-title { font-size: 11.5pt; margin-bottom: 10px; break-after: avoid; }
   .title-ico { display: none; }
   .timeline { padding-left: 12px; }
-  .tl-item { padding-bottom: 10px; break-inside: avoid; }
+  .tl-item { padding-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
   .tl-item::before { display: none; }
   .tl-item::after { left: -12px; box-shadow: none; background: #000; width: 5px; height: 5px; top: 8px; }
   .tl-item .when { color: #444; }
+  .tl-item p,
+  .tl-item li { font-size: 9pt; line-height: 1.45; }
+  .tl-item ul { gap: 3px; margin-top: 4px; }
+  .tl-item .when { margin: 1px 0 4px; font-size: 8.5pt; }
+  .fact-label { margin-right: 4px; }
   .skills-card { border: 0; padding: 0; background: none; gap: 8px; }
   .skill-bar { display: none; }
   .foot { display: none; }
@@ -1234,7 +1243,9 @@ img { display: block; max-width: 100%; height: auto; }
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--card-inner);
 }
 
 .work-row-thumb-fallback {

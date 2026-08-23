@@ -23,7 +23,7 @@ pipeline could miss the right rows or answer without enough evidence after a dat
 ## Approach
 
 - **Made evaluation reproducible.** Built a task-specific evaluation set, defined quantitative
-  retrieval and answer metrics, and automated the comparison loop so each change could be measured.
+  retrieval and answer metrics, and automated the comparison cycle so each change could be measured.
 - **Combined retrieval strategies.** Paired hybrid OpenSearch retrieval with Text-to-SQL and
   DocumentSQL paths so structured queries and unstructured search could complement each other.
 - **Improved ranking and language alignment.** Added cross-encoder reranking, prompt refinement,
@@ -33,11 +33,13 @@ pipeline could miss the right rows or answer without enough evidence after a dat
 
 ## Result
 
-- **Search quality | Improved retrieval accuracy by 140.3% over the baseline** in the primary
-  evaluation, while answer accuracy improved by 83.4%.
-- **Reranking impact | Added 2.0 percentage points of answer accuracy** when OpenSearch and SQL
-  results were reranked separately before being merged.
-- **Evaluation operations | Turned quality work into a repeatable engineering loop** with a maintained
+- **Retrieval quality | Reached 84.21% retrieval correctness, up from 76.85% at baseline.** This
+  measures whether the retrieved context contains evidence that can answer the query.
+- **Answer quality | Reached 68.36% answer correctness, up from 59.85% at baseline.** This measures
+  whether the final response correctly answers the query, rather than merely retrieving relevant context.
+- **Latency | Reduced total response time from 43.5s to 18.2s in the primary comparison.** Separate
+  reranking of OpenSearch and SQL results also delivered a 2.0 percentage-point answer-quality lift.
+- **Evaluation operations | Turned quality work into a repeatable engineering cycle** with a maintained
   dataset, decomposed latency metrics, and automated score comparisons.
 - **Trustworthy answers | Established a product direction for evidence checks and refusal behavior**
   instead of rewarding fluent answers without sufficient support.

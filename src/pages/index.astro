@@ -51,7 +51,7 @@ const featuredGroups = Array.from(new Set(featured.map((entry) => entry.data.cat
                   <a class="work-row" href={`/projects/${entry.id}`}>
                     <div class="work-row-thumb">
                       {entry.data.cover ? (
-                        <Image src={entry.data.cover} alt={entry.data.coverAlt ?? entry.data.title} width={192} height={144} />
+                <Image src={entry.data.cover} alt={entry.data.coverAlt ?? entry.data.title} width={192} height={144} fit="contain" />
                       ) : (
                         <div class:list={['work-row-thumb-fallback', entry.data.tint]}>
                           <span>{entry.data.mark || entry.data.title.slice(0, 2)}</span>

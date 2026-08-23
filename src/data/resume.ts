@@ -66,7 +66,7 @@ export const experience: ExperienceItem[] = [
     highlights: [
       'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. **Reached 151 MAU and 60.9K requests across Web, MCP, and Slack**, while average response time fell **81% from 21.5s to 4.0s**.',
       '**Built the product quality system**: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
-      '**Closed the feedback loop** with automated follow-ups, inbound feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
+      '**Built a structured product-improvement cycle** with automated follow-ups, in-app feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
       'Converted scattered domain expertise into a reviewed knowledge asset. Domain experts contribute, experiments validate changes, and approved gaps flow back into the system automatically; the approach was piloted against a held-out evaluation set.',
       'Owned metric operations and ad hoc analysis across marketing, CX, billing, and logistics, including aggregation logic changes with complete historical backfills.',
     ],
@@ -81,7 +81,7 @@ export const experience: ExperienceItem[] = [
     summary: 'Developed applied AI capabilities for enterprise supply-chain products in the AI research group.',
     highlights: [
       'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables instead of lossy summaries.',
-      'Built an evaluation dataset and automated quality loop, then combined hybrid retrieval, Text-to-SQL, and reranking to deliver **+140.3% search accuracy** and **+83.4% answer accuracy** over the baseline.',
+      'Built an evaluation dataset and automated evaluation cycle, then combined hybrid retrieval, Text-to-SQL, and reranking to deliver stronger retrieval and answer correctness over the baseline.',
       'Designed an Agentic RAG direction with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],

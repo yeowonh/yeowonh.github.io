@@ -19,7 +19,7 @@ export const site = {
    */
   intro: [
     'I am an Analytics Engineer and AI Systems builder who turns ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
-    'I connect data, retrieval, evaluation, APIs, and user feedback into one product loop. I care about adoption, quality, and speed in production, make trade-offs explicit, and turn operating signals into the next improvement.',
+    'I connect data, retrieval, evaluation, APIs, and user feedback into one improvement cycle. I care about adoption, quality, and speed in production, make trade-offs explicit, and turn operating signals into the next improvement.',
   ],
 
   url: 'https://yeowonh.github.io',
@@ -53,7 +53,7 @@ export const site = {
     {
       icon: 'network',
       title: 'Retrieval & Evaluation',
-      text: 'Design evidence-grounded RAG and evaluation systems that make quality visible and improvable.',
+      text: 'Design evidence-based RAG and evaluation systems that make quality visible and improvable.',
     },
     {
       icon: 'database',

@@ -35,9 +35,9 @@ request.
 - **Made quality measurable.** Established a golden evaluation set, scheduled consistency checks,
   product telemetry, and session-level scoring, then reviewed failures on a fixed cadence to guide
   the next iteration.
-- **Closed the knowledge feedback loop.** Turned user feedback and recurring answer gaps into
-  reviewable knowledge candidates, giving domain experts a structured way to improve the system
-  without editing prompts or code.
+- **Turned feedback into a structured knowledge improvement cycle.** User feedback and recurring
+  answer gaps became reviewable knowledge candidates, giving domain experts a clear way to improve
+  the system without editing prompts or code.
 - **Met users in their existing workflow.** Delivered the experience through a web product and an
   MCP interface for AI development tools, with multi-turn conversation and practical answer
   refinement features for non-engineers.
@@ -56,5 +56,5 @@ request.
   guarded query execution, visible evidence, and lineage became product contracts rather than
   hidden implementation details.
 - **Knowledge operations | Converted recurring answer gaps into a reviewed shared asset.** Created
-  a closed loop in which feedback becomes reviewable knowledge candidates that improve both human
-  search and agent workflows.
+  a structured cycle in which feedback becomes reviewable knowledge candidates that improve both
+  human search and agent workflows.
