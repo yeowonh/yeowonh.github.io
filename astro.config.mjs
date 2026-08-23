@@ -13,8 +13,8 @@ export default defineConfig({
   site: siteUrl,
 
   build: {
-    // /resume/ 대신 /resume 로 링크가 생성되도록
-    format: 'file',
+    // GitHub Pages에서도 /projects/<slug>/ 형태의 clean URL을 유지한다.
+    format: 'directory',
   },
 
   i18n: {
