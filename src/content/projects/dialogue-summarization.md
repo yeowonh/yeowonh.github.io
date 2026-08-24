@@ -15,11 +15,11 @@ order: 30
 
 ## Problem
 
-Summarizing a two-person exchange is a solved-enough problem. A group conversation is not: several
+Summarizing a two-person exchange is a relatively well-understood problem. Group conversations are not:
 topics run in parallel, get dropped, and resume ten turns later. A single summary of the whole thing
 loses exactly what someone reading it needs.
 
-The task was to find those topics and summarize each one.
+The task was to identify those topics and summarize each one.
 
 ## Approach
 

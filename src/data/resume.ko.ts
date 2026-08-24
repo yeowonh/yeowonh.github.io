@@ -109,7 +109,7 @@ export const publications: PublicationItem[] = [
 
 export const awards: AwardItem[] = [
   {
-    title: 'Side Impact 2024 Spark Track 후원 선정',
+    title: '브라이언임팩트재단 Side Impact 2024 Spark Track 후원 선정',
     org: '브라이언임팩트재단',
     date: '2024년 10월 ~ 2025년 2월',
     note: 'Hello World가 공익성과 구현 완성도를 인정받아 선정되었습니다. 상담 데이터 수집과 정제, MongoDB 적재, LangChain 채팅 에이전트 구축 등 검색 챗봇 전반을 담당했습니다.',
@@ -145,5 +145,5 @@ export const certifications: CredentialItem[] = [
 export const languages: CredentialItem[] = [
   { name: '한국어', issuer: '원어민' },
   { name: '일본어', issuer: 'JLPT N1 · 160점', detail: '일본국제교류기금, 2025년 1월' },
-  { name: '영어', issuer: 'OPIc IH · TOEIC 870', detail: 'ACTFL, 2024년 6월 · YBM, 2025년 2월' },
+  { name: '영어', issuer: 'OPIc IH', detail: 'ACTFL, 2024년 6월' },
 ];

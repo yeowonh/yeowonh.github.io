@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
     kind: 'Full-time',
     location: 'Pangyo, South Korea',
     summary:
-      'Builds analytics systems and AI-assisted data products that help business teams answer questions without waiting on a specialist.',
+      'Build analytics systems and AI-assisted data products that help business teams answer questions without waiting on a specialist.',
     highlights: [
       'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. **Reached 151 MAU and 60.9K requests across Web, MCP, and Slack**, while average response time fell **81% from 21.5s to 4.0s**.',
       '**Built the product quality system**: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
@@ -78,11 +78,11 @@ export const experience: ExperienceItem[] = [
     period: 'May 2025 to Dec 2025',
     kind: 'Full-time',
     location: 'Seoul, South Korea',
-    summary: 'Developed applied AI capabilities for enterprise supply-chain products in the AI research group.',
+    summary: 'Developed applied AI capabilities for enterprise supply-chain products as part of the AI research group.',
     highlights: [
       'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables instead of lossy summaries.',
-      'Built an evaluation dataset and automated evaluation cycle, then combined hybrid retrieval, Text-to-SQL, and reranking to deliver stronger retrieval and answer correctness over the baseline.',
-      'Designed an Agentic RAG direction with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
+      'Built an evaluation dataset and automated evaluation cycle, then combined hybrid retrieval, Text-to-SQL, and reranking to improve retrieval and answer correctness over the baseline.',
+      'Defined an Agentic RAG architecture with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],
   },
@@ -93,11 +93,11 @@ export const experience: ExperienceItem[] = [
     kind: 'Internship',
     location: 'Seoul, South Korea',
     summary:
-      'Developed vertical AI for financial law and conducted embedding research for Korean financial text in the AI Solutions division.',
+      'Developed domain-specific AI for financial law and conducted embedding research on Korean financial text in the AI Solutions division.',
     highlights: [
       'Extended an employee-facing legal and regulatory QA agent from flat retrieval to GraphRAG, enabling answers to follow relationships between provisions, enforcement decrees, and rules.',
       '**Co-authored TWICE (ICLR 2025 Workshop) and NMIXX (CIKM 2025 Workshop)** on Korean financial embeddings and benchmarks.',
-      'Ran hard-negative-mining experiments for Korean financial retrieval and published the write-up as a Hugging Face community article.',
+      'Conducted hard-negative mining experiments for Korean financial retrieval and published the findings as a Hugging Face community article.',
     ],
     stack: ['PyTorch', 'GraphRAG', 'Neo4j', 'Embeddings', 'RAG'],
   },
@@ -134,7 +134,7 @@ export const publications: PublicationItem[] = [
     title: 'NMIXX: Domain-Adapted Neural Embeddings for Cross-Lingual eXploration of Finance',
     venue: 'CIKM 2025 Workshop on Advances in Financial AI',
     date: '2025',
-    note: 'A Korean finance embedding model paired with KorFinSTS, a high-quality semantic similarity benchmark, and released with the training data and code.',
+    note: 'Co-developed a Korean finance embedding model and paired it with KorFinSTS, a high-quality semantic similarity benchmark; released both with the training data and code.',
     href: 'https://arxiv.org/abs/2507.09601',
   },
   {
@@ -149,13 +149,13 @@ export const publications: PublicationItem[] = [
     title: 'Exploring Hard Negative Mining with NV-Retriever in Korean Financial Text',
     venue: 'Hugging Face community article',
     date: 'Jan 2025',
-    note: "On why random negatives teach a retriever almost nothing, NV-Retriever's positive-aware approach, and what happened when it was applied to Korean financial text.",
+    note: "Explains the limits of random negatives, NV-Retriever's positive-aware approach, and its application to Korean financial text.",
   },
 ];
 
 export const awards: AwardItem[] = [
   {
-    title: 'Side Impact 2024, Spark Track Sponsorship Selection',
+    title: "Selected for Brian Impact Foundation's Side Impact 2024 Spark Track",
     org: 'Brian Impact Foundation',
     date: 'Oct 2024 to Feb 2025',
     note: 'Hello World was selected for its public-interest value and the completeness of its implementation. I owned the retrieval chatbot: collecting and cleaning consultation data, loading it into MongoDB, and building the chat agent with LangChain.',
@@ -164,13 +164,13 @@ export const awards: AwardItem[] = [
     title: 'Finalist, 5th Place, Everyday Dialogue Summarization Challenge',
     org: 'National Institute of Korean Language',
     date: 'Aug 2024',
-    note: 'Identify the several topics inside a multi-party conversation and summarize each one. I did the EDA and error analysis that drove preprocessing and prompt design, then handled quantization, training, and hyperparameter tuning.',
+    note: 'Identified multiple topics within a multi-party conversation and summarized each one. I led EDA and error analysis to guide preprocessing and prompt design, then handled quantization, training, and hyperparameter tuning.',
   },
   {
     title: 'Encouragement Award, SeSAC Hackathon 2024',
     org: 'Seoul Business Agency',
     date: 'Aug 2024',
-    note: 'For Hello World, an AI contact center for migrant workers underserved by shrinking support-center staff.',
+    note: 'Recognized Hello World, an AI-powered contact center for migrant workers facing reduced access to support-center staff.',
   },
   {
     title: 'Excellence Award (2nd Place), 15th Creative Design Competition',
@@ -191,5 +191,5 @@ export const certifications: CredentialItem[] = [
 export const languages: CredentialItem[] = [
   { name: 'Korean', issuer: 'Native' },
   { name: 'Japanese', issuer: 'JLPT N1 · Score 160', detail: 'Japan Foundation, Jan 2025' },
-  { name: 'English', issuer: 'OPIc IH · TOEIC 870', detail: 'ACTFL, Jun 2024 · YBM, Feb 2025' },
+  { name: 'English', issuer: 'OPIc IH', detail: 'ACTFL, Jun 2024' },
 ];

@@ -22,7 +22,7 @@ of both. Students were spending real time hunting for things the university alre
 
 ## Approach
 
-As team lead, I owned the path from an ambiguous student need to a working beta, including problem
+As team lead, I led the project from an ambiguous student need to a working beta, including problem
 framing, data collection, modeling, and API development.
 
 - **Framed the user problem before choosing the model.** The team focused on the gap between

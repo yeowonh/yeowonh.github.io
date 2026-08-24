@@ -26,11 +26,11 @@ for the domain and a benchmark rigorous enough to measure it.
 ## Approach
 
 - **Domain-adapted the embedding model** on Korean financial text rather than translating an English
-  one, so the idiom and convention of the domain survive.
+  one, preserving domain-specific phrasing and conventions.
 - **Built KorFinSTS alongside it**, creating a semantic textual similarity benchmark for Korean
   finance so improvement claims could be tested directly.
-- **Released the training data, code, and benchmark**, so the result can be reproduced and argued
-  with.
+- **Released the training data, code, and benchmark**, so others can reproduce and scrutinize the
+  result.
 
 ## Result
 
@@ -38,7 +38,7 @@ for the domain and a benchmark rigorous enough to measure it.
   FinSTS** over the pre-adaptation checkpoint.
 - **Dataset scale | Built with 18.8K high-confidence training triplets and a 1,921-pair Korean
   financial STS benchmark** spanning news, disclosures, research reports, and regulations.
-- **Research validation | Outperformed seven open-license baselines and earned an oral presentation**
+- **Research validation | Outperformed seven open-license baselines and was selected for an oral presentation**
   at the CIKM 2025 Workshop on Advances in Financial AI.
 - **Reproducibility | Released the models and benchmark publicly,** while documenting the explicit
   trade-off between financial specialization and general-purpose STS performance.

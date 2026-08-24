@@ -18,8 +18,8 @@ export const site = {
    * Adapted from the LinkedIn summary. Edit freely; this is your voice.
    */
   intro: [
-    'I am an Analytics Engineer and AI Systems builder who turns ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
-    'I connect data, retrieval, evaluation, APIs, and user feedback into one improvement cycle. I care about adoption, quality, and speed in production, make trade-offs explicit, and turn operating signals into the next improvement.',
+    'I am an Analytics Engineer who builds AI systems that turn ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
+    'I connect data, retrieval, evaluation, APIs, and user feedback into a continuous improvement cycle. I care about adoption, quality, and speed in production, make trade-offs explicit, and use operating signals to prioritize the next improvement.',
   ],
 
   url: 'https://yeowonh.github.io',
@@ -63,7 +63,7 @@ export const site = {
     {
       icon: 'server',
       title: 'Production Delivery',
-      text: 'Take systems from prototype to reliable operation through APIs, observability, and feedback.',
+      text: 'Move systems from prototype to reliable operation through APIs, observability, and feedback.',
     },
   ],
 } as const;

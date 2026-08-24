@@ -1,6 +1,6 @@
 ---
 title: 'TWICE: A Korean Financial Embedding Benchmark'
-summary: Co-built and open-sourced KorFinMTEB, a 26-dataset benchmark across seven tasks that exposed 5% to 8% performance gaps hidden by translated financial evaluations.
+summary: Co-developed and open-sourced KorFinMTEB, a 26-dataset benchmark across seven tasks that revealed 5% to 8% performance gaps hidden by translated financial evaluations.
 category: NLP Research
 period: 'Dec 2024 to Mar 2025'
 role: 'Benchmark construction & evaluation'
@@ -19,9 +19,9 @@ links:
 
 ## Problem
 
-Embedding models only earn their keep when they fit the domain, but benchmarks such as FinMTEB are
-built for high-resource languages. For Korean, the usual shortcut is to
-translate an English benchmark and call it done.
+Embedding models are useful only when they reflect the target domain, but benchmarks such as FinMTEB are
+built for high-resource languages. For Korean, the common shortcut is to translate an English benchmark
+and treat it as sufficient.
 
 That shortcut hides the interesting failures. A translated benchmark carries English phrasing and
 English financial convention with it, so a model can score well on it while still missing the
@@ -30,9 +30,9 @@ idiom, cultural framing, and domain vocabulary that Korean financial text actual
 ## Approach
 
 - **Built KorFinMTEB from Korean sources**, designed to reflect the linguistic and cultural
-  specifics of the domain rather than a translation of someone else's test set.
-- **Evaluated the same models on both** a translated FinMTEB and KorFinMTEB, which is what makes
-  the gap visible instead of theoretical.
+  specifics of the domain rather than a translation of an existing benchmark.
+- **Evaluated the same models on both** a translated FinMTEB and KorFinMTEB, making the gap
+  measurable rather than theoretical.
 
 ## Result
 

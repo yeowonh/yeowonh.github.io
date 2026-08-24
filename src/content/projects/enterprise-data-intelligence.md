@@ -16,7 +16,7 @@ order: 70
 
 ## Problem
 
-Enterprise data is rarely hard to access for just one reason. Tables, business definitions,
+Enterprise data is rarely difficult to use for a single reason. Tables, business definitions,
 ownership, and lineage live in different places, while the context needed to use them safely often
 remains with a small group of specialists. Keyword search alone cannot bridge those gaps, and an
 ungoverned language model can produce a plausible answer without enough evidence.

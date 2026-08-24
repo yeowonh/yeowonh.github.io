@@ -19,7 +19,7 @@ links:
 
 ## Problem
 
-Financial regulation is layered on purpose. A clause in the Capital Markets Act cites other clauses
+Financial regulation is intentionally layered. A clause in the Capital Markets Act cites other clauses
 and delegates the detail to enforcement decrees and rules, so the text that answers an employee's
 question is often three hops away from the text they searched for.
 
@@ -38,7 +38,7 @@ which is often the provision that *states* the rule rather than the ones that qu
 
 ## Result
 
-- **Productionization | Shipped as an extension of an employee-facing vertical AI assistant,** not
+- **Production deployment | Shipped as an extension of an employee-facing vertical AI assistant,** not
   as a standalone research prototype.
 - **Retrieval capability | Expanded legal QA from single-hop similarity search to relationship-aware
   multi-hop context,** covering citations and delegation across provisions, decrees, and rules.

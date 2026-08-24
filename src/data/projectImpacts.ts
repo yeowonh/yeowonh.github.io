@@ -185,14 +185,14 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
     },
     'helloworld-aicc': {
       eyebrow: 'Impact snapshot',
-      title: 'From hackathon validation to release-oriented service',
+      title: 'From hackathon validation to a deployable service',
       items: [
         {
           kind: 'metric',
           label: 'External validation',
           value: '2 recognitions',
-          caption: 'Award and social-impact sponsorship secured within six months',
-          tokens: ['SeSAC award', 'Spark Track'],
+          caption: 'Award and Brian Impact Foundation sponsorship secured within six months',
+          tokens: ['SeSAC award', 'Brian Impact Foundation'],
         },
         {
           kind: 'flow',
@@ -460,8 +460,8 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
           kind: 'metric',
           label: '외부 검증',
           value: '2회 선정',
-          caption: '6개월 안에 수상과 공익 프로젝트 후원 확보',
-          tokens: ['SeSAC 수상', 'Spark Track'],
+          caption: '6개월 안에 수상과 브라이언임팩트재단 후원 확보',
+          tokens: ['SeSAC 수상', '브라이언임팩트재단'],
         },
         {
           kind: 'flow',
