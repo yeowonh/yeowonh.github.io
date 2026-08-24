@@ -40,31 +40,33 @@ const featuredGroups = Array.from(new Set(featured.map((entry) => entry.data.cat
 
   <section class="section">
     <h3 class="section-title">Selected Work</h3>
-    <div class="work-groups">
+    <div class="featured-projects">
       {
         featuredGroups.map((group) => (
-          <section class="work-group">
-            <h4 class="work-group-title">{group.category}</h4>
-            <div class="work-list">
+          <section class="featured-project-group">
+            <h4 class="featured-project-group-title">{group.category}</h4>
+            <div class="featured-project-list">
               {
                 group.entries.map((entry) => (
-                  <a class="work-row" href={`/projects/${entry.id}`}>
-                    <div class="work-row-thumb">
+                  <a class="featured-project-row" href={`/projects/${entry.id}`}>
+                    <div class="featured-project-thumb">
                       {entry.data.cover ? (
                 <Image src={entry.data.cover} alt={entry.data.coverAlt ?? entry.data.title} width={192} height={144} fit="contain" />
                       ) : (
-                        <div class:list={['work-row-thumb-fallback', entry.data.tint]}>
+                        <div class:list={['featured-project-thumb-fallback', entry.data.tint]}>
                           <span>{entry.data.mark || entry.data.title.slice(0, 2)}</span>
                         </div>
                       )}
                     </div>
-                    <div class="work-row-main">
-                      <div class="work-row-head">
+                    <div class="featured-project-main">
+                      <div class="featured-project-head">
                         <h5>{entry.data.title}</h5>
                         <span class="yr">{entry.data.period}</span>
                       </div>
-                      {entry.data.organization && <span class="org">{entry.data.organization}</span>}
-                      <span class="cat">{entry.data.category}</span>
+                      <div class="featured-project-meta">
+                        {entry.data.organization && <span class="org">{entry.data.organization}</span>}
+                        <span class="cat">{entry.data.category}</span>
+                      </div>
                       <p>{entry.data.summary}</p>
                     </div>
                   </a>
