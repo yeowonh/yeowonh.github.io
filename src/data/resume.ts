@@ -62,13 +62,13 @@ export const experience: ExperienceItem[] = [
     kind: 'Full-time',
     location: 'Pangyo, South Korea',
     summary:
-      'Build self-service analytics systems and applied AI products, while delivering decision-ready product and growth analysis for business teams.',
+      'Design product-growth and campaign-decision analyses, while building self-service data and AI products that make those decisions easier to act on.',
     highlights: [
+      '**Designed product and growth analyses for decision-making.** Defined cohorts, exposure and index dates, conversion windows, and comparable baselines to distinguish acquisition, activation, repeat behavior, and campaign impact; validated event coverage and denominators before interpreting results.',
+      '**Built reusable audience-analysis frameworks for campaign planning.** Combined behavioral and regional signals, then checked target precision, coverage, and holdout comparisons before activation.',
       '**Launched a self-service data intelligence product** that unifies catalog, lineage, and business terminology across Web, MCP, and Slack. In the latest measurement period, it reached **151 MAU and 60.9K requests** while average response time fell **81%, from 21.5s to 4.0s**.',
       '**Established product-quality operations** with daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and session-level LLM scoring with recurring failure reviews.',
       '**Turned feedback and observed answer gaps into product improvements.** Automated follow-ups, in-app feedback, and biweekly interviews informed multi-turn conversation, image input, answer editing, and a non-developer interface.',
-      '**Designed product and growth analyses for decision-making.** Defined cohorts, exposure and index dates, conversion windows, and comparable baselines to distinguish acquisition, activation, repeat behavior, and campaign impact; validated event coverage and denominators before interpreting results.',
-      '**Built reusable audience-analysis frameworks for campaign planning.** Combined behavioral and regional signals, then checked target precision, coverage, and holdout comparisons before activation.',
     ],
     stack: ['Python', 'SQL', 'LLM', 'MCP', 'ETL'],
   },
