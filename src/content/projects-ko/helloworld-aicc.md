@@ -3,7 +3,7 @@ title: 'Hello World: 이주노동자를 위한 AI 컨택센터'
 summary: 실제 상담 사례에 근거해 다국어로 답하고 핵심 대화 맥락을 상담사에게 전달하는 검색 챗봇을 구축해, 공익성과 완성도를 인정받은 지원 플랫폼으로 발전시켰습니다.
 category: Conversational AI
 period: '2024년 8월 ~ 2025년 4월'
-role: '검색 챗봇 · 데이터, 저장소, 채팅 에이전트'
+role: 'RAG 챗봇 · 데이터, 저장소, 채팅 에이전트'
 organization: 'HelloWorld-AICC team'
 stack: ['Python', 'LangChain', 'MongoDB', 'Azure', 'RAG']
 cover: '../../assets/projects/helloworld.png'

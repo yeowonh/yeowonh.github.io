@@ -1,9 +1,9 @@
 ---
 title: 'Hello World: AI-Powered Contact Center for Migrant Workers'
-summary: Built the retrieval chatbot for an award-winning support platform, grounding multilingual answers in real consultation cases and passing concise session context to human counselors.
+summary: Built the RAG chatbot for an award-winning support platform, grounding multilingual answers in real consultation cases and passing concise session context to human counselors.
 category: Conversational AI
 period: 'Aug 2024 to Apr 2025'
-role: 'Retrieval chatbot · Data, storage, chat agent'
+role: 'RAG chatbot · Data, storage, chat agent'
 organization: 'HelloWorld-AICC team'
 stack: ['Python', 'LangChain', 'MongoDB', 'Azure', 'RAG']
 cover: '../../assets/projects/helloworld.png'
@@ -28,7 +28,7 @@ practical support such as drafting a cover letter for a job application.
 
 ## Approach
 
-- **Retrieval over real consultation cases, not raw statutes.** Legal text states the rule but often
+- **Grounded RAG over real consultation cases, not raw statutes.** Legal text states the rule but often
   does not explain what a person should do next. I collected and cleaned consultation cases
   covering migrant worker issues, loaded them into MongoDB, and built the chat agent with LangChain
   so each query is answered from the most similar case a real counselor had already handled. This

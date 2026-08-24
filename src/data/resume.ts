@@ -158,7 +158,7 @@ export const awards: AwardItem[] = [
     title: "Selected for Brian Impact Foundation's Side Impact 2024 Spark Track",
     org: 'Brian Impact Foundation',
     date: 'Oct 2024 to Feb 2025',
-    note: 'Hello World was selected for its public-interest value and the completeness of its implementation. I owned the retrieval chatbot: collecting and cleaning consultation data, loading it into MongoDB, and building the chat agent with LangChain.',
+    note: 'Hello World was selected for its public-interest value and the completeness of its implementation. I owned the RAG chatbot: collecting and cleaning consultation data, loading it into MongoDB, and building the chat agent with LangChain.',
   },
   {
     title: 'Finalist, 5th Place, Everyday Dialogue Summarization Challenge',

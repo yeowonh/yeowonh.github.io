@@ -18,7 +18,7 @@ export const site = {
    * Adapted from the LinkedIn summary. Edit freely; this is your voice.
    */
   intro: [
-    'I am an Analytics Engineer who builds AI systems that turn ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped retrieval and GraphRAG assistants and researched Korean finance language models.',
+    'I am an Analytics Engineer who builds AI systems that turn ambiguous business questions into reliable products. At Kakao Mobility, I build self-service data systems and AI workflows; previously, I shipped RAG-based assistants, including GraphRAG systems, and researched Korean finance language models.',
     'I connect data, retrieval, evaluation, APIs, and user feedback into a continuous improvement cycle. I care about adoption, quality, and speed in production, make trade-offs explicit, and use operating signals to prioritize the next improvement.',
   ],
 
@@ -52,8 +52,8 @@ export const site = {
     },
     {
       icon: 'network',
-      title: 'Retrieval & Evaluation',
-      text: 'Design evidence-based RAG and evaluation systems that make quality visible and improvable.',
+      title: 'RAG & Evaluation',
+      text: 'Design evidence-based RAG pipelines and evaluation systems that make answer quality visible and improvable.',
     },
     {
       icon: 'database',
@@ -72,7 +72,7 @@ export const siteKo = {
   ...site,
   title: 'Analytics Engineer · AI Systems',
   intro: [
-    'Analytics Engineer이자 AI Systems builder입니다. 모호한 비즈니스 질문을 신뢰할 수 있는 제품으로 바꾸며, Kakao Mobility에서는 셀프서비스 데이터 시스템과 AI 워크플로를, 이전에는 retrieval·GraphRAG assistant와 Korean finance language model을 개발했습니다.',
+    'Analytics Engineer이자 AI Systems builder입니다. 모호한 비즈니스 질문을 신뢰할 수 있는 제품으로 바꾸며, Kakao Mobility에서는 셀프서비스 데이터 시스템과 AI 워크플로를, 이전에는 RAG·GraphRAG assistant와 Korean finance language model을 개발했습니다.',
     '데이터와 검색, 평가, API, 사용자 피드백을 하나의 제품 루프로 연결합니다. 모델 성능과 실제 채택, 운영 속도를 함께 보고, 운영 데이터에서 다음 개선의 근거를 찾습니다.',
   ],
   location: 'Seongnam, South Korea',
@@ -90,7 +90,7 @@ export const siteKo = {
     },
     {
       icon: 'network',
-      title: 'Retrieval & Evaluation',
+      title: 'RAG & Evaluation',
       text: '근거 중심 RAG와 평가 체계를 설계해 답변 품질을 보이게 만들고 지속적으로 개선합니다.',
     },
     {
