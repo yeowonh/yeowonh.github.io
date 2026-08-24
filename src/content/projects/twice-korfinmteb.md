@@ -1,6 +1,6 @@
 ---
 title: 'TWICE: A Korean Financial Embedding Benchmark'
-summary: Co-developed and open-sourced KorFinMTEB, a 26-dataset benchmark across seven tasks that revealed 5% to 8% performance gaps hidden by translated financial evaluations.
+summary: Co-developed and open-sourced KorFinMTEB, a 26-dataset benchmark across seven tasks that revealed 5% to 8% score gaps hidden by translated financial evaluations.
 category: NLP Research
 period: 'Dec 2024 to Mar 2025'
 role: 'Benchmark construction & evaluation'
@@ -38,8 +38,8 @@ idiom, cultural framing, and domain vocabulary that Korean financial text actual
 
 - **Benchmark scale | Released 26 datasets across seven task categories,** covering classification,
   clustering, retrieval, summarization, pair classification, reranking, and semantic similarity.
-- **Evaluation insight | Revealed 5% to 8% performance drops on native Korean tasks** requiring
-  deeper semantic understanding, gaps that translated benchmarks had obscured.
+- **Evaluation insight | Revealed 5% to 8% score gaps on native Korean tasks** requiring deeper
+  semantic understanding, gaps that translated benchmarks had obscured.
 - **Research validation | Accepted at the ICLR 2025 Workshop on Advances in Financial AI.**
 - **Reproducibility | Open-sourced the full benchmark** so low-resource domain evaluation can be
   reproduced and extended instead of relying on translated test sets.

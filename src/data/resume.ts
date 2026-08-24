@@ -14,6 +14,7 @@ export type ExperienceItem = {
   role: string;
   company: string;
   period: string;
+  section?: 'experience' | 'training';
   kind?: string;
   location?: string;
   summary?: string;
@@ -52,9 +53,8 @@ export type CredentialItem = {
 export const experience: ExperienceItem[] = [
   {
     /**
-     * Written from the internal self-review, deliberately abstracted: no internal
-     * system names, no colleague names, no absolute operating metrics, no business
-     * figures. Relative growth only. Keep it that way when editing.
+     * Written from the internal self-review and limited to public-safe aggregate
+     * metrics. Do not add internal system names, raw data, or unreleased figures.
      */
     role: 'Analytics Engineer',
     company: 'Kakao Mobility',
@@ -62,13 +62,13 @@ export const experience: ExperienceItem[] = [
     kind: 'Full-time',
     location: 'Pangyo, South Korea',
     summary:
-      'Build analytics systems and AI-assisted data products that help business teams answer questions without waiting on a specialist.',
+      'Build self-service analytics systems and applied AI products, while delivering decision-ready product and growth analysis for business teams.',
     highlights: [
-      'Launched an internal data catalog that unifies table lineage with a business ontology, then expanded it into AI development workflows through MCP. **Reached 151 MAU and 60.9K requests across Web, MCP, and Slack**, while average response time fell **81% from 21.5s to 4.0s**.',
-      '**Built the product quality system**: daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and LLM-based scoring for every session with failures reviewed on a fixed cadence.',
-      '**Built a structured product-improvement cycle** with automated follow-ups, in-app feedback, and biweekly interviews. Shipped the capabilities users asked for, including multi-turn conversations, image input, answer regeneration and editing, and an interface for non-developers.',
-      'Converted scattered domain expertise into a reviewed knowledge asset. Domain experts contribute, experiments validate changes, and approved gaps flow back into the system automatically; the approach was piloted against a held-out evaluation set.',
-      'Owned metric operations and ad hoc analysis across marketing, CX, billing, and logistics, including aggregation logic changes with complete historical backfills.',
+      '**Launched a self-service data intelligence product** that unifies catalog, lineage, and business terminology across Web, MCP, and Slack. In the latest measurement period, it reached **151 MAU and 60.9K requests** while average response time fell **81%, from 21.5s to 4.0s**.',
+      '**Established product-quality operations** with daily adoption reporting, a golden evaluation set for catalog accuracy, weekly consistency checks, and session-level LLM scoring with recurring failure reviews.',
+      '**Turned feedback and observed answer gaps into product improvements.** Automated follow-ups, in-app feedback, and biweekly interviews informed multi-turn conversation, image input, answer editing, and a non-developer interface.',
+      '**Designed product and growth analyses for decision-making.** Defined cohorts, exposure and index dates, conversion windows, and comparable baselines to distinguish acquisition, activation, repeat behavior, and campaign impact; validated event coverage and denominators before interpreting results.',
+      '**Built reusable audience-analysis frameworks for campaign planning.** Combined behavioral and regional signals, then checked target precision, coverage, and holdout comparisons before activation.',
     ],
     stack: ['Python', 'SQL', 'LLM', 'MCP', 'ETL'],
   },
@@ -78,11 +78,12 @@ export const experience: ExperienceItem[] = [
     period: 'May 2025 to Dec 2025',
     kind: 'Full-time',
     location: 'Seoul, South Korea',
-    summary: 'Developed applied AI capabilities for enterprise supply-chain products as part of the AI research group.',
+    summary: 'Developed and evaluated grounded AI capabilities for enterprise supply-chain workflows as part of the AI research group.',
     highlights: [
-      'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables instead of lossy summaries.',
-      'Built an evaluation dataset and automated evaluation cycle, then combined hybrid retrieval, Text-to-SQL, and reranking to improve retrieval and answer correctness over the baseline.',
-      'Defined an Agentic RAG architecture with query decomposition, evidence checks, and refusal guidance for unsupported questions.',
+      'Built a TableRAG question-answering assistant for supplier workflows, grounding responses in source tables rather than lossy summaries.',
+      '**Built a task-specific evaluation set and automated comparison workflow.** Hybrid retrieval, Text-to-SQL, and reranking increased retrieval correctness from **76.85% to 84.21%** and final-answer accuracy from **59.85% to 68.36%**.',
+      '**Reduced end-to-end response time from 43.5s to 18.2s** in the primary comparison, while separate reranking of search and SQL results added a further **2.0 percentage-point** answer-quality lift.',
+      'Designed an evidence-oriented Agentic RAG architecture with query decomposition, evidence checks, and abstention guidance for unsupported questions.',
     ],
     stack: ['Python', 'LLM', 'RAG', 'TableRAG'],
   },
@@ -95,17 +96,18 @@ export const experience: ExperienceItem[] = [
     summary:
       'Developed domain-specific AI for financial law and conducted embedding research on Korean financial text in the AI Solutions division.',
     highlights: [
-      'Extended an employee-facing legal and regulatory QA agent from flat retrieval to GraphRAG, enabling answers to follow relationships between provisions, enforcement decrees, and rules.',
+      'Extended an employee-facing legal and regulatory QA agent from flat retrieval to GraphRAG, enabling answers to follow citations and delegation across provisions, enforcement decrees, and rules.',
       '**Co-authored TWICE (ICLR 2025 Workshop) and NMIXX (CIKM 2025 Workshop)** on Korean financial embeddings and benchmarks.',
       'Conducted hard-negative mining experiments for Korean financial retrieval and published the findings as a Hugging Face community article.',
     ],
     stack: ['PyTorch', 'GraphRAG', 'Neo4j', 'Embeddings', 'RAG'],
   },
   {
-    role: 'Engineering Trainee',
+    role: 'NLP Engineering Trainee',
     company: 'Naver Boostcamp AI Tech (6th, NLP track)',
     period: 'Nov 2023 to Apr 2024',
-    kind: '800-hour traineeship',
+    section: 'training',
+    kind: '800-hour professional traineeship',
     location: 'Seoul, South Korea · Hybrid',
     summary:
       'Completed six months of intensive NLP engineering through competitions, team delivery, and code review.',

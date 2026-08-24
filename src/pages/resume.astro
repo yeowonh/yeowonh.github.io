@@ -11,6 +11,9 @@ import {
   certifications,
   languages,
 } from '../data/resume';
+
+const professionalExperience = experience.filter((item) => item.section !== 'training');
+const training = experience.filter((item) => item.section === 'training');
 ---
 
 <BaseLayout title="Resume" heading="Resume" description={`Résumé of ${site.name}, ${site.title}`}>
@@ -22,7 +25,7 @@ import {
 
     <ol class="timeline">
       {
-        experience.map((job) => (
+        professionalExperience.map((job) => (
           <li class="tl-item">
             <h4>{job.role} · {job.company}</h4>
             <span class="when">
@@ -30,7 +33,7 @@ import {
               {job.kind && ` · ${job.kind}`}
               {job.location && ` · ${job.location}`}
             </span>
-            {job.summary && <p>{job.summary}</p>}
+            {job.summary && <p class="tl-summary">{job.summary}</p>}
             {job.highlights.length > 0 && (
               <ul>
                 {job.highlights.map((h) => (
@@ -44,6 +47,41 @@ import {
       }
     </ol>
   </section>
+
+  {
+    training.length > 0 && (
+      <section class="section">
+        <h3 class="section-title with-ico">
+          <span class="title-ico"><Icon name="book" /></span>
+          Professional Training
+        </h3>
+
+        <ol class="timeline">
+          {
+            training.map((item) => (
+              <li class="tl-item">
+                <h4>{item.role} · {item.company}</h4>
+                <span class="when">
+                  {item.period}
+                  {item.kind && ` · ${item.kind}`}
+                  {item.location && ` · ${item.location}`}
+                </span>
+                {item.summary && <p class="tl-summary">{item.summary}</p>}
+                {item.highlights.length > 0 && (
+                  <ul>
+                    {item.highlights.map((highlight) => (
+                      <li><HighlightText text={highlight} /></li>
+                    ))}
+                  </ul>
+                )}
+                {item.stack && item.stack.length > 0 && <p class="tags">{item.stack.join(' · ')}</p>}
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+    )
+  }
 
   <section class="section">
     <h3 class="section-title with-ico">

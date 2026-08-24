@@ -10,7 +10,7 @@ cover: '../../assets/projects/sejongmate.png'
 coverAlt: 'SejongMate 클라이언트, 서버, 데이터베이스 아키텍처'
 tint: tint-3
 mark: SM
-featured: true
+featured: false
 order: 40
 ---
 

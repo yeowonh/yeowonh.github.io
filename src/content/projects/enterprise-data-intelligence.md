@@ -1,9 +1,9 @@
 ---
 title: Enterprise Data Intelligence Platform
-summary: Launched an AI-assisted data intelligence platform across Web, MCP, and Slack, reaching 151 MAU and 60.9K requests in the latest observed period while cutting average response time by 81%.
+summary: Launched a self-service AI data product across Web, MCP, and Slack, helping teams move from a data question to an evidence-backed answer without waiting on a specialist.
 category: Enterprise AI
 period: 'Jan 2026 to Present'
-role: 'Analytics Engineer · Product, AI agent, retrieval, evaluation'
+role: 'Analytics Engineer · Product, RAG, evaluation'
 organization: 'Kakao Mobility'
 stack: ['Python', 'LangGraph', 'FastAPI', 'Next.js', 'BigQuery', 'Airflow', 'MCP', 'Langfuse']
 cover: '../../assets/projects/enterprise-data-intelligence.png'
@@ -35,26 +35,21 @@ request.
 - **Made quality measurable.** Established a golden evaluation set, scheduled consistency checks,
   product telemetry, and session-level scoring, then reviewed failures on a fixed cadence to guide
   the next iteration.
-- **Turned feedback into a structured knowledge improvement cycle.** User feedback and recurring
-  answer gaps became reviewable knowledge candidates, giving domain experts a clear way to improve
-  the system without editing prompts or code.
+- **Made product improvement evidence-led.** User feedback and recurring answer gaps became
+  reviewable knowledge candidates, giving domain experts a clear way to improve the system without
+  editing prompts or code.
 - **Met users in their existing workflow.** Delivered the experience through a web product and an
   MCP interface for AI development tools, with multi-turn conversation and practical answer
   refinement features for non-engineers.
 
 ## Result
 
-- **Usage scale | Recorded 60.9K requests across three product surfaces.** From Jun 24 to Aug 22,
-  the product supported 178 active users and 1,621 sessions across Web, MCP, and Slack.
-- **Adoption | Reached 151 MAU in August MTD, up 6.3× from March.** The product moved beyond a
-  discovery tool into a repeatable self-service path for understanding and using enterprise data.
-- **Performance | Cut average response time from 21.5s to 4.0s, an 81% reduction.** P90 latency
-  also fell from 38.6s to 6.8s as usage expanded.
-- **Quality operations | Sustained 99.7% Web Trace completion in the latest 30-day window.**
-  Reviewed 2,173 traces through daily telemetry, scheduled audits, and session-level evaluation.
-- **Governance | Made trust controls part of the user experience.** Permission-aware retrieval,
-  guarded query execution, visible evidence, and lineage became product contracts rather than
-  hidden implementation details.
-- **Knowledge operations | Converted recurring answer gaps into a reviewed shared asset.** Created
-  a structured cycle in which feedback becomes reviewable knowledge candidates that improve both
-  human search and agent workflows.
+- **Self-service adoption | Reached 151 MAU in August MTD, up from 24 MAU in March.** From Jun 24
+  to Aug 22, the product supported 178 active users, 1,621 sessions, and 60.9K requests across
+  Web, MCP, and Slack.
+- **Speed | Cut average response time from 21.5s to 4.0s, an 81% reduction.** P90 latency also
+  fell from 38.6s to 6.8s as usage expanded.
+- **Operational quality | Sustained 99.7% Web Trace completion in the latest 30-day window.**
+  The team reviewed 2,173 traces through daily telemetry, scheduled audits, and session-level evaluation.
+- **Trust by design | Made safeguards visible to users.** Permission-aware RAG, guarded query
+  execution, evidence, and lineage are part of the product experience rather than hidden implementation details.

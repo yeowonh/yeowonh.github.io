@@ -419,6 +419,12 @@ img { display: block; max-width: 100%; height: auto; }
 
 .tl-item p { font-size: 14.5px; color: var(--muted); line-height: 1.75; max-width: 76ch; }
 
+.tl-item .tl-summary {
+  margin-top: 5px;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
 .tl-item ul { display: grid; gap: 5px; margin-top: 6px; }
 
 .tl-item li {

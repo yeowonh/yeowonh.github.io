@@ -10,10 +10,24 @@ const featured = (await getCollection('projects', ({ data }) => !data.draft && d
   (a, b) => b.data.order - a.data.order,
 );
 
-const featuredGroups = Array.from(new Set(featured.map((entry) => entry.data.category))).map((category) => ({
-  category,
-  entries: featured.filter((entry) => entry.data.category === category),
-}));
+const professionalOrganizations = new Set([
+  'Kakao Mobility',
+  'emro',
+  'Shinhan Investment Corp.',
+  'HelloWorld-AICC team',
+]);
+const featuredGroups = [
+  {
+    category: 'Professional Impact',
+    entries: featured.filter(
+      (entry) => entry.data.category !== 'NLP Research' && entry.data.organization && professionalOrganizations.has(entry.data.organization),
+    ),
+  },
+  {
+    category: 'Research & Publications',
+    entries: featured.filter((entry) => entry.data.category === 'NLP Research'),
+  },
+].filter((group) => group.entries.length > 0);
 ---
 
 <BaseLayout heading="About Me">

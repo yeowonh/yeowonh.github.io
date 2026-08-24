@@ -35,7 +35,8 @@ for the domain and a benchmark rigorous enough to measure it.
 ## Result
 
 - **Model quality | Improved Spearman correlation by +0.22 on KorFinSTS and +0.10 on English
-  FinSTS** over the pre-adaptation checkpoint.
+  FinSTS** over the pre-adaptation checkpoint. Spearman correlation measures agreement between the
+  model's similarity ranking and the human similarity labels.
 - **Dataset scale | Built with 18.8K high-confidence training triplets and a 1,921-pair Korean
   financial STS benchmark** spanning news, disclosures, research reports, and regulations.
 - **Research validation | Outperformed seven open-license baselines and was selected for an oral presentation**

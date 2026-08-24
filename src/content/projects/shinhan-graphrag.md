@@ -1,6 +1,6 @@
 ---
 title: GraphRAG Agent for Financial Law
-summary: Extended an employee-facing financial law QA agent from flat retrieval to GraphRAG so answers could follow citations and delegation across related provisions.
+summary: Implemented a GraphRAG extension for an employee-facing financial-law QA agent, allowing answers to follow citations and delegation across related provisions.
 category: Enterprise AI
 period: 'Aug 2024 to Nov 2024'
 role: 'AI Engineer Intern · Shinhan Investment Corp.'
@@ -38,9 +38,9 @@ which is often the provision that *states* the rule rather than the ones that qu
 
 ## Result
 
-- **Production deployment | Shipped as an extension of an employee-facing vertical AI assistant,** not
-  as a standalone research prototype.
+- **Product integration | Implemented as an extension of an employee-facing financial-law assistant,**
+  rather than as a standalone research prototype.
 - **Retrieval capability | Expanded legal QA from single-hop similarity search to relationship-aware
   multi-hop context,** covering citations and delegation across provisions, decrees, and rules.
-- **Answer traceability | Preserved the legal relationship path used to assemble context,** making
-  supporting provisions easier to inspect than in flat retrieval.
+- **Answer traceability | Preserved the legal relationship path used to assemble context,** so users
+  can inspect the supporting provisions rather than relying on an unsupported answer.

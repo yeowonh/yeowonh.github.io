@@ -76,7 +76,7 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
           kind: 'comparison',
           label: 'Answer correctness',
           value: '68.36%',
-          caption: 'Final response correctly answers the query',
+          caption: 'Final-answer accuracy on the task-specific evaluation set',
           bars: [
             { label: 'Baseline', amount: 59.85, display: '59.85%' },
             { label: 'Optimized', amount: 68.36, display: '68.36%' },
@@ -266,14 +266,14 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
     },
     'shinhan-graphrag': {
       eyebrow: 'Impact snapshot',
-      title: 'Production retrieval with relationship-aware evidence',
+      title: 'Relationship-aware evidence for financial-law QA',
       items: [
         {
           kind: 'metric',
-          label: 'Productionization',
-          value: 'Shipped',
-          caption: 'Extended an employee-facing vertical AI assistant',
-          tokens: ['Employee product', 'Vertical AI'],
+          label: 'Product integration',
+          value: 'Integrated',
+          caption: 'Implemented as an extension of an employee-facing financial-law assistant',
+          tokens: ['Employee product', 'Financial law'],
         },
         {
           kind: 'flow',
@@ -345,7 +345,7 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
           kind: 'comparison',
           label: 'Answer correctness',
           value: '68.36%',
-          caption: '최종 답변이 질문에 정확히 답하는 비율',
+          caption: '과제 특화 평가 세트에서 최종 답변이 질문에 정확히 답하는 비율',
           bars: [
             { label: 'Baseline', amount: 59.85, display: '59.85%' },
             { label: 'Optimized', amount: 68.36, display: '68.36%' },
@@ -535,14 +535,14 @@ export const projectImpacts: Record<Locale, Record<string, ProjectImpact>> = {
     },
     'shinhan-graphrag': {
       eyebrow: '성과 한눈에 보기',
-      title: '관계형 근거를 제공하는 프로덕션 검색',
+      title: '금융 법률 QA를 위한 관계 기반 근거 검색',
       items: [
         {
           kind: 'metric',
-          label: '프로덕션 적용',
-          value: '출시 완료',
-          caption: '임직원용 버티컬 AI 어시스턴트 기능으로 확장',
-          tokens: ['임직원 제품', '버티컬 AI'],
+          label: '제품 통합',
+          value: '통합 구현',
+          caption: '임직원용 금융 법률 AI 어시스턴트의 확장 기능으로 구현',
+          tokens: ['임직원 제품', '금융 법률'],
         },
         {
           kind: 'flow',

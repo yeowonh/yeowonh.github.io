@@ -1,6 +1,6 @@
 ---
 title: 'Hello World: AI-Powered Contact Center for Migrant Workers'
-summary: Built the RAG chatbot for an award-winning support platform, grounding multilingual answers in real consultation cases and passing concise session context to human counselors.
+summary: Built the RAG chatbot for an award-winning migrant-worker support platform, grounding multilingual answers in real consultation cases and preserving context for human counselors.
 category: Conversational AI
 period: 'Aug 2024 to Apr 2025'
 role: 'RAG chatbot · Data, storage, chat agent'
@@ -45,7 +45,7 @@ practical support such as drafting a cover letter for a job application.
 - **External validation | Received two forms of recognition within six months.** Won the Encouragement
   Award at SeSAC Hackathon 2024 and was selected for the Brian Impact Foundation's Side Impact 2024
   Spark Track sponsorship for public-interest value and implementation completeness.
-- **Production delivery | Evolved from a hackathon prototype into a deployable service.** Shipped
+- **Deployment readiness | Evolved from a hackathon prototype into a deployable service.** Shipped
   streaming RAG, authenticated conversation history, counselor summaries, and automated deployment
   on a serverless Azure backend.
 - **Service continuity | Preserved context across AI and human support.** Designed structured session

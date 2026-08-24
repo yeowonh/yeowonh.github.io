@@ -1,6 +1,6 @@
 ---
 title: 'TableRAG: Grounded QA for Enterprise Tables'
-summary: Upgraded a table-focused RAG pipeline for enterprise supply-chain workflows, combining hybrid retrieval and Text-to-SQL to improve search and answer quality.
+summary: Built a grounded TableRAG pipeline for enterprise supply-chain workflows, combining hybrid retrieval and Text-to-SQL to make table-based answers more accurate and faster.
 category: Enterprise AI
 period: 'May 2025 to Dec 2025'
 role: 'AI Research Engineer · RAG, evaluation, pipeline design'
@@ -31,12 +31,19 @@ pipeline could miss the right rows or answer without enough evidence after a dat
 - **Designed for grounded answers.** Explored an Agentic RAG flow with query decomposition, evidence
   checks, and refusal guidance for questions that did not have sufficient support.
 
+## Evaluation framework
+
+The comparison uses the maintained task-specific evaluation set and predefined scoring criteria
+introduced for this project. **Retrieval correctness** measures whether the retrieved context contains
+sufficient evidence to answer a question. **Answer correctness** measures whether the final response
+answers that question accurately. Response time is measured end to end, from question input to final answer.
+This separates the quality of evidence from the quality of the generated response and makes each pipeline
+change comparable against the baseline.
+
 ## Result
 
-- **Retrieval quality | Reached 84.21% retrieval correctness, up from 76.85% at baseline.** This
-  measures whether the retrieved context contains evidence that can answer the query.
-- **Answer quality | Reached 68.36% answer correctness, up from 59.85% at baseline.** This measures
-  whether the final response correctly answers the query, rather than merely retrieving relevant context.
+- **Retrieval quality | Reached 84.21% retrieval correctness, up 7.36 percentage points from 76.85%.**
+- **Answer quality | Reached 68.36% final-answer accuracy, up 8.51 percentage points from 59.85%.**
 - **Latency | Reduced total response time from 43.5s to 18.2s in the primary comparison.** Separate
   reranking of OpenSearch and SQL results also delivered a 2.0 percentage-point answer-quality lift.
 - **Evaluation operations | Turned quality work into a repeatable engineering cycle** with a maintained

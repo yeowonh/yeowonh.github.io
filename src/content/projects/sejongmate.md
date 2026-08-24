@@ -10,7 +10,7 @@ cover: '../../assets/projects/sejongmate.png'
 coverAlt: 'SejongMate client, server, and database architecture'
 tint: tint-3
 mark: SM
-featured: true
+featured: false
 order: 40
 ---
 
