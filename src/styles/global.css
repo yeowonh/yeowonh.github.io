@@ -1185,7 +1185,10 @@ img { display: block; max-width: 100%; height: auto; }
    ABOUT: selected work list + recognition
    -------------------------------------------------------------------------- */
 
-.featured-projects { display: grid; gap: 28px; }
+.selected-work-section { margin-top: 42px; }
+.selected-work-section > .section-title { margin-bottom: 8px; }
+
+.featured-projects { display: grid; gap: 22px; }
 
 .featured-project-group {
   padding: 0;
@@ -1219,7 +1222,7 @@ img { display: block; max-width: 100%; height: auto; }
   grid-template-columns: 92px minmax(0, 1fr);
   align-items: start;
   gap: 15px;
-  padding: 11px 12px;
+  padding: 8px 12px;
   border: 0;
   border-radius: 12px;
   background: var(--card-inner);
