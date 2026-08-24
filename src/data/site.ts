@@ -18,7 +18,7 @@ export const site = {
    * Adapted from the LinkedIn summary. Edit freely; this is your voice.
    */
   intro: [
-    'I am an Analytics Engineer who builds trustworthy AI and data products from ambiguous business questions. At Kakao Mobility, I develop self-service data systems and applied AI workflows; previously, I built evidence-based AI assistants for financial-law and counseling workflows and co-developed Korean financial embedding benchmarks.',
+    'I am an Analytics Engineer who builds trustworthy AI and data products from ambiguous business questions. At Kakao Mobility, I develop self-service data systems and applied AI workflows; previously, I built evidence-based AI assistants for financial-law and migrant-worker support workflows and co-developed Korean financial embedding benchmarks.',
     'I work end to end, from data modeling and RAG evaluation to production instrumentation. I use adoption, quality, and latency signals to make trade-offs explicit and guide the next product improvement.',
   ],
 
@@ -72,7 +72,7 @@ export const siteKo = {
   ...site,
   title: 'Analytics Engineer · Applied AI & Data Products',
   intro: [
-    '데이터·AI 제품을 설계하는 Analytics Engineer입니다. Kakao Mobility에서 셀프서비스 데이터 시스템과 Applied AI 워크플로를 만들고 있으며, 이전에는 금융 법률과 상담 업무를 위한 근거 기반 AI 어시스턴트를 개발하고 한국어 금융 임베딩 벤치마크를 공동 구축했습니다.',
+    '데이터·AI 제품을 설계하는 Analytics Engineer입니다. Kakao Mobility에서 셀프서비스 데이터 시스템과 Applied AI 워크플로를 만들고 있으며, 이전에는 금융 법률과 이주노동자 지원을 위한 근거 기반 AI 어시스턴트를 개발하고 한국어 금융 임베딩 벤치마크를 공동 구축했습니다.',
     '데이터 모델링, RAG 평가, 운영 지표를 연결해 제품 품질과 사용자 경험을 함께 개선합니다. 제품 채택, 품질, 응답 속도 데이터를 바탕으로 우선순위와 기술적 선택을 결정합니다.',
   ],
   location: 'Seongnam, South Korea',
